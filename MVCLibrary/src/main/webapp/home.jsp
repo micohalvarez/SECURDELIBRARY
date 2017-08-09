@@ -1,5 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+         pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <head>
     <!-- Required meta tags -->
@@ -73,10 +76,10 @@
                 <div class="row">
                     <div class="col-sm-6 m-3">
                         <p class="lead pl-4">Search for books, articles, magazines, and more</p>
-                        <form>
+                        <form:form action="/search" method="post" modelAttribute="user">
                             <div class="form-group row no-gutters ml-4">
                                 <div class="col-10">
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" name="keyword"/>
                                 </div>
                                 <div class="col-2">
                                     <button type="submit" class="btn btn-success full-width">Search</button>
@@ -97,7 +100,7 @@
                                     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> Author
                                 </label>
                             </div>
-                        </form>
+                        </form:form>
                     </div>
                     <div class="col-sm-3 offset-2 mt-3">
                         <p class="lead">Need a meeting room?</p>
@@ -105,127 +108,11 @@
                     </div>
                 </div>
 
-                <div class="row">
-                    FEFE
-                </div>
             </div>
         </div>
     </div>
 
-    <!--
-    <div class="container-fluid">
-        <div class="row p-3">
-            <div class="col-2 bg-white pl-4 pr-4 pt-3 pb-3">
-                Filter Resources:
-                <div class="form-check mt-3">
-                    <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" value=""> Book
-                    </label>
-                </div>
-                <div class="form-check">
-                    <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" value=""> Magazine
-                    </label>
-                </div>
-                <div class="form-check">
-                    <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" value=""> Thesis
-                    </label>
-                </div>
-            </div>
-            <div class="col-9 bg-white ml-3 pl-4 pr-4 pt-3 pb-3 text-center">
-                <form>
-                    <div class="form-group row no-gutters m-4">
-                        <div class="col-6">
-                            <input type="text" class="form-control" placeholder="Title, Author, Keyword, ...">
-                        </div>
-                        <div class="col-2">
-                            <button type="submit" class="btn btn-success full-width">Search</button>
-                        </div>
 
-                        <div class="col-2 offset-2">
-                            <button type="submit" class="btn btn-outline-success full-width">Reserve Rooms</button>
-                        </div>
-                    </div>
-                </form>
-
-                <p>Resources</p>
-                <div class="row mt-5">
-                    <div class="col-3">
-                        <img src="img/book.png">
-                        <p>Introduction to Language</p>
-                    </div>
-                    <div class="col-3">
-                        <img src="img/magazine.png">
-                        <p>Cosmopolitan</p>
-                    </div>
-                    <div class="col-3">
-                        <img src="img/book.png">
-                        <p>Chemistry 101</p>
-                    </div>
-                    <div class="col-3">
-                        <img src="img/book.png">
-                        <p>C Programming</p>
-                    </div>
-                </div>
-                <div class="row mt-5">
-                    <div class="col-3">
-                        <img src="img/book.png">
-                        <p>Introduction to Language</p>
-                    </div>
-                    <div class="col-3">
-                        <img src="img/magazine.png">
-                        <p>Cosmopolitan</p>
-                    </div>
-                    <div class="col-3">
-                        <img src="img/book.png">
-                        <p>Chemistry 101</p>
-                    </div>
-                    <div class="col-3">
-                        <img src="img/book.png">
-                        <p>C Programming</p>
-                    </div>
-                </div>
-                <div class="row mt-5">
-                    <div class="col-3">
-                        <img src="img/book.png">
-                        <p>Introduction to Language</p>
-                    </div>
-                    <div class="col-3">
-                        <img src="img/magazine.png">
-                        <p>Cosmopolitan</p>
-                    </div>
-                    <div class="col-3">
-                        <img src="img/book.png">
-                        <p>Chemistry 101</p>
-                    </div>
-                    <div class="col-3">
-                        <img src="img/book.png">
-                        <p>C Programming</p>
-                    </div>
-                </div>
-                <div class="row mt-5">
-                    <div class="col-3">
-                        <img src="img/book.png">
-                        <p>Introduction to Language</p>
-                    </div>
-                    <div class="col-3">
-                        <img src="img/magazine.png">
-                        <p>Cosmopolitan</p>
-                    </div>
-                    <div class="col-3">
-                        <img src="img/book.png">
-                        <p>Chemistry 101</p>
-                    </div>
-                    <div class="col-3">
-                        <img src="img/book.png">
-                        <p>C Programming</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
--->
 
 
     <!-- jQuery first, then Tether, then Bootstrap JS. -->

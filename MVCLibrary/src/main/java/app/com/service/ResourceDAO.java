@@ -1,5 +1,7 @@
 package app.com.service;
 
+import app.com.model.Resource;
+
 import java.awt.print.Book;
 import java.util.List;
 
@@ -8,15 +10,15 @@ import java.util.List;
  */
 public interface ResourceDAO {
 
-    public List<Book> getBooks(String keyword);
-    public List<Book> getBooksByAuthor(String author);
-    public List<Book> getBooksByTitle(String title);
+    public List<Resource> getBooks(String keyword);
+    public List<Resource> getBooksByAuthor(String author);
+    public List<Resource> getBooksByTitle(String title);
     public void reserveBook(int bookID, int userID);
     public void borrowBook(int bookID , int userID);
     public void returnBook(int bookID, int userID);
     public void deleteBook(int bookID);
-    public void addBook(Book book);
-    public void editBook(Book book);
+    public void addBook(Resource book);
+    public void editBook(Resource book);
 }
 
 
