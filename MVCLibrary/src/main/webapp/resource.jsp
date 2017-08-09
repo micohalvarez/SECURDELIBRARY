@@ -114,27 +114,27 @@
                                     </form>
                                 </div>
 
-                                <div class="row mb-3">
-                                    <div class="col-2">
-                                        <p>Status:</p>
-                                    </div>
-                                    <div class="col-2 text-danger">
-                                        BORROWED
-                                        <br>
-                                        <small class="text-muted">[until July 22, 2017]</small>
-                                        <button type="submit" class="btn btn-success full-width mt-3">Reserve</button>
-                                    </div>
-                                </div>
+                                <%--<div class="row mb-3">--%>
+                                    <%--<div class="col-2">--%>
+                                        <%--<p>Status:</p>--%>
+                                    <%--</div>--%>
+                                    <%--<div class="col-2 text-danger">--%>
+                                        <%--BORROWED--%>
+                                        <%--<br>--%>
+                                        <%--<small class="text-muted">[until July 22, 2017]</small>--%>
+                                        <%--<button type="submit" class="btn btn-success full-width mt-3">Reserve</button>--%>
+                                    <%--</div>--%>
+                                <%--</div>--%>
 
-                                <div class="row mb-3">
-                                    <div class="col-2">
-                                        <p>Status:</p>
-                                    </div>
-                                    <div class="col-2 text-muted">
-                                        Library use only.
-                                        <button type="submit" class="btn btn-success disabled full-width mt-3">Borrow</button>
-                                    </div>
-                                </div>
+                                <%--<div class="row mb-3">--%>
+                                    <%--<div class="col-2">--%>
+                                        <%--<p>Status:</p>--%>
+                                    <%--</div>--%>
+                                    <%--<div class="col-2 text-muted">--%>
+                                        <%--Library use only.--%>
+                                        <%--<button type="submit" class="btn btn-success disabled full-width mt-3">Borrow</button>--%>
+                                    <%--</div>--%>
+                                <%--</div>--%>
                             </div>
                         </div>
                     </div>
