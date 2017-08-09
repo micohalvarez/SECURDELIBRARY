@@ -38,4 +38,19 @@ public class RoomDAOImpl implements RoomDAO {
 
         return r;
     }
+
+    @Override
+    public void reserveRoom(int roomID, int userID) {
+
+    }
+
+    @Override
+    public void freeRoom(int roomID, int userID) {
+
+    }
+
+    @Override
+    public List<Room> getFreeRooms(Room room) {
+        return null;
+    }
 }

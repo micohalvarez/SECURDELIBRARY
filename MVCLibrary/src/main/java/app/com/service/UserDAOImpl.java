@@ -32,35 +32,53 @@ public class UserDAOImpl implements UserDAO {
         //add given person to db
         System.out.print(u.getFirstname());
         String sql = "INSERT INTO " + User.TABLE_NAME + " Set " +
-                User.COLUMN_UN + "= ? ," +
-                User.COLUMN_EMAIL + "= ?," +
-                User.COLUMN_PW + "=?," +
-                User.COLUMN_BDAY + "=?," +
-                User.COLUMN_SEQANS + "=?," +
-                User.COLUMN_SEQID + "=?," +
-                User.COLUMN_USERTYPE + "=?," +
-                User.COLUMN_IDNUM + "=?," +
-                User.COLUMN_FIRSTNAME + "=?," +
-                User.COLUMN_INITIAL + "=?," +
-                 User.COLUMN_LASTNAME + "=?";
+                User.COLUMN_UN + " = ? ," +
+                User.COLUMN_EMAIL + " = ?," +
+                User.COLUMN_PW + " =?, " +
+                User.COLUMN_BDAY + " =?, " +
+                User.COLUMN_SEQANS + " =?, " +
+                User.COLUMN_SEQID + " =?, " +
+                User.COLUMN_USERTYPE + " =?," +
+                User.COLUMN_IDNUM + " =?," +
+                User.COLUMN_FIRSTNAME + " = ?," +
+                User.COLUMN_INITIAL + " = ?," +
+                User.COLUMN_LASTNAME + " = ?";
 
 
-
-
-
-        temp.update(sql, u.getUsername(),u.getEmail(),u.getPassword(),u.getBirthday(),u.getSecAns(),u.getSecretquestion(),1,u.getUserID() +
-        u.getFirstname(),u.getInitial(),u.getLastname());
+        temp.update(sql, u.getUsername(),u.getEmail(),u.getPassword(),u.getBirthday(),u.getSecAns(),u.getSecretquestion(),"Micoh",u.getIdNumber(),
+                u.getFirstname(),u.getInitial(),u.getLastname());
 
 
     }
-    public void deleteUser(int uid){
+    public void deleteUser(int userID){
 
         String sql = "DELETE FROM " + User.TABLE_NAME + " "
-                + "WHERE " +  User.COLUMN_UID + " = " + uid + ";";
+                + "WHERE " +  User.COLUMN_UID + " = ?";
 
 
+    }
+    public List<User> getUser(String username, String password){
 
+        String sql = "SELECT * FROM " + User.TABLE_NAME + " Where " + User.COLUMN_PW + " = ? " + " AND " + User.COLUMN_UN + " = ?";
 
+        List<User> u = temp.query(sql,  new Object[] {password,username}, new RowMapper<User>() {
+
+            @Override
+            public User mapRow(ResultSet rs, int rowNumber) throws SQLException {
+                // TODO Auto-generated method stub
+                User u = new User();
+
+                u.setUserID(rs.getInt(User.COLUMN_UID));
+                u.setUsername(rs.getString(User.COLUMN_UN));
+                u.setEmail(rs.getString(User.COLUMN_EMAIL));
+                u.setIdNumber(rs.getString(User.COLUMN_IDNUM));
+                u.setPassword(rs.getString(User.COLUMN_PW));
+
+                return u;
+            }
+
+        });
+           return u;
     }
 
     public List<User> getAllUsers(){

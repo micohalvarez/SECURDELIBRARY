@@ -36,6 +36,5 @@ public class Comment {
 		this.comment = comment;
 	}
 	
-	
-	
+
 }

@@ -9,6 +9,9 @@ import java.util.List;
  */
 public interface RoomDAO {
 
+    public void reserveRoom(int roomID, int userID);
+    public void freeRoom(int roomID, int userID);
+    public List<Room> getFreeRooms(Room room);
     public List<Room> getAllRooms();
 
 }

@@ -7,36 +7,36 @@ public class Resource {
 	public final static String COLUMN_LOCATION = "location";
 	public final static String COLUMN_TITLE = "title";
 	public final static String COLUMN_TAGS = "tags";
-	public final static String COLUMN_AUTHORID = "authorID";
-	public final static String COLUMN_PUBLISHERID = "publisherID";
+	public final static String COLUMN_AUTHOR = "author";
+	public final static String COLUMN_PUBLISHER = "publisher";
 	public final static String COLUMN_TYPE = "type";
 	
 	
-	private int resourceID,type,authorID,publisherID;
-	private String location,title,tags;
+	private int resourceID;
+	private String location,title,tags,author,publisher,type;
 	public int getResourceID() {
 		return resourceID;
 	}
 	public void setResourceID(int resourceID) {
 		this.resourceID = resourceID;
 	}
-	public int getType() {
+	public String getType() {
 		return type;
 	}
-	public void setType(int type) {
+	public void setType(String type) {
 		this.type = type;
 	}
-	public int getAuthorID() {
-		return authorID;
+	public String getAuthor() {
+		return author;
 	}
-	public void setAuthorID(int authorID) {
-		this.authorID = authorID;
+	public void setAuthor(String author) {
+		this.author = author;
 	}
-	public int getPublisherID() {
-		return publisherID;
+	public String getPublisherID() {
+		return publisher;
 	}
-	public void setPublisherID(int publisherID) {
-		this.publisherID = publisherID;
+	public void setPublisher(String publisher) {
+		this.publisher = publisher;
 	}
 	public String getLocation() {
 		return location;

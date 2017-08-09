@@ -24,7 +24,7 @@ public class RoomController {
     public ModelAndView reserveRoom(ModelAndView model, @ModelAttribute User user) {
 
 
-        List<Room> room = rs.getAllRooms();
+        List<Room> room = rs.getRooms();
         return null;
     }
 }

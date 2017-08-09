@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
          pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -77,7 +78,7 @@
  <div class="row">
   <div class="col-sm-4 offset-sm-4 align-self-center text-center mt-5">
    <p class="lead text-header text-muted">Log In</p>
-   <form action = "/login" method="post">
+   <form action = "/signIn" method="post" modelAttribute="user">
     <div class="form-group pt-3">
      <input type="text" class="form-control" placeholder="Username" name = "username">
     </div>

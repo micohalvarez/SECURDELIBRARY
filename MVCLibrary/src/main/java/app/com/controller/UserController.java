@@ -27,18 +27,27 @@ public class UserController {
     @Autowired
     private UserDAO userdao;
 
+
+    @RequestMapping(value={"/"}, method = RequestMethod.POST)
+    public ModelAndView init(ModelAndView model) {
+        model.addObject("user", new User());
+        model.setViewName("index");
+        return model;
+    }
     @RequestMapping(value={"/signIn"}, method = RequestMethod.POST)
     public ModelAndView signIn(ModelAndView model, @ModelAttribute User user) {
+        model.addObject("user", userdao.getUser(user.getUsername(),user.getPassword()));
+        model.setViewName("home");
 
-
-        return null;
+        return model;
     }
     @RequestMapping(value={"/signUp"}, method = RequestMethod.POST)
     public ModelAndView signUp(@ModelAttribute("user") User user) {
         System.out.print(user.getEmail());
         userdao.addUser(user);
-        return new ModelAndView("redirect:/index");
+        return new ModelAndView("redirect:/index.jsp");
     }
+
     @RequestMapping(value={"/reguser"}, method = RequestMethod.POST)
     public ModelAndView reguser(ModelAndView model) {
         model.addObject("user", new User());

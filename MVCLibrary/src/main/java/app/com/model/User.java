@@ -31,7 +31,7 @@ public class User {
     private String userType;
     private String firstname;
     private String lastname;
-    private Character initial;
+    private String initial;
 
     public String getFirstname() {
         return firstname;
@@ -45,10 +45,10 @@ public class User {
     public void setLastname(String lastname) {
         this.lastname = lastname;
     }
-    public Character getInitial() {
+    public String getInitial() {
         return initial;
     }
-    public void setInitial(Character initial) {
+    public void setInitial(String initial) {
         this.initial = initial;
     }
 
