@@ -1,14 +1,12 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<script type="text/javascript"
-	src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
-<script type="text/javascript"></script>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Home</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Home</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
@@ -55,24 +53,9 @@
             padding: 14px;
         }
     </style>
-    <script>
-	$(document).ready(function() {
-		
-		$(".book_title").click(function() {
-			var name = $(this).text();
-			$("#rname").val(name);
-			$("#borrowform").submit();
-		});
-		$(".search_button").click(function() {
-			var name = $("#search_tag").val();
-			$("#sname").val(name);
-			$("#searchForm").submit();
-		});
-	
-	});
-	</script>
-    </head>
-<<body class="bg-faded">
+</head>
+
+<body class="bg-faded">
     <div class="container-fluid">
         <nav class="navbar fixed-top navbar-light nav-border bg-white">
             <a class="navbar-brand">
@@ -81,6 +64,55 @@
         </nav>
     </div>
 
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-10 offset-sm-1 bg-white align-self-center bordered p-4">
+                <p class="lead text-header pt-3 pl-3">Senior High School Library System</p>
+                <hr>
+
+                <div class="row">
+                    <div class="col-sm-6 m-3">
+                        <p class="lead pl-4">Search for books, articles, magazines, and more</p>
+                        <form>
+                            <div class="form-group row no-gutters ml-4">
+                                <div class="col-10">
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-2">
+                                    <button type="submit" class="btn btn-success full-width">Search</button>
+                                </div>
+                            </div>
+                            <div class="form-check form-check-inline ml-4">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Keyword
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Title
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> Author
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-sm-3 offset-2 mt-3">
+                        <p class="lead">Need a meeting room?</p>
+                        <button type="submit" class="btn btn-outline-success">Reserve Room</button>
+                    </div>
+                </div>
+
+                <div class="row">
+                    FEFE
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--
     <div class="container-fluid">
         <div class="row p-3">
             <div class="col-2 bg-white pl-4 pr-4 pt-3 pb-3">
@@ -102,40 +134,98 @@
                 </div>
             </div>
             <div class="col-9 bg-white ml-3 pl-4 pr-4 pt-3 pb-3 text-center">
-                <form id="searchForm" action = "SearchPageServlet" method = post>
+                <form>
                     <div class="form-group row no-gutters m-4">
                         <div class="col-6">
-                            <input type="text" id="search_tag" class="form-control" placeholder="Search">
+                            <input type="text" class="form-control" placeholder="Title, Author, Keyword, ...">
                         </div>
-                        <input type="hidden" name="searchtag" id="sname" />
-                        <input type="hidden" name="userid" value="${userid}" />
-                        <div class="col-2 search_button">
+                        <div class="col-2">
                             <button type="submit" class="btn btn-success full-width">Search</button>
                         </div>
+
+                        <div class="col-2 offset-2">
+                            <button type="submit" class="btn btn-outline-success full-width">Reserve Rooms</button>
+                        </div>
                     </div>
-                    
                 </form>
-			
+
                 <p>Resources</p>
-                <div class = "row mt-5 text-center">
-               <c:forEach var="r" items="${resourcelist}">
-               
-                    <div class="col-3 mt-5">
-                        <img src="img/book.png"><br>
-                        <a href ="#" class ="book_title">${r.title}</a>
+                <div class="row mt-5">
+                    <div class="col-3">
+                        <img src="img/book.png">
+                        <p>Introduction to Language</p>
                     </div>
-                    </c:forEach>
+                    <div class="col-3">
+                        <img src="img/magazine.png">
+                        <p>Cosmopolitan</p>
                     </div>
+                    <div class="col-3">
+                        <img src="img/book.png">
+                        <p>Chemistry 101</p>
+                    </div>
+                    <div class="col-3">
+                        <img src="img/book.png">
+                        <p>C Programming</p>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-3">
+                        <img src="img/book.png">
+                        <p>Introduction to Language</p>
+                    </div>
+                    <div class="col-3">
+                        <img src="img/magazine.png">
+                        <p>Cosmopolitan</p>
+                    </div>
+                    <div class="col-3">
+                        <img src="img/book.png">
+                        <p>Chemistry 101</p>
+                    </div>
+                    <div class="col-3">
+                        <img src="img/book.png">
+                        <p>C Programming</p>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-3">
+                        <img src="img/book.png">
+                        <p>Introduction to Language</p>
+                    </div>
+                    <div class="col-3">
+                        <img src="img/magazine.png">
+                        <p>Cosmopolitan</p>
+                    </div>
+                    <div class="col-3">
+                        <img src="img/book.png">
+                        <p>Chemistry 101</p>
+                    </div>
+                    <div class="col-3">
+                        <img src="img/book.png">
+                        <p>C Programming</p>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-3">
+                        <img src="img/book.png">
+                        <p>Introduction to Language</p>
+                    </div>
+                    <div class="col-3">
+                        <img src="img/magazine.png">
+                        <p>Cosmopolitan</p>
+                    </div>
+                    <div class="col-3">
+                        <img src="img/book.png">
+                        <p>Chemistry 101</p>
+                    </div>
+                    <div class="col-3">
+                        <img src="img/book.png">
+                        <p>C Programming</p>
+                    </div>
+                </div>
             </div>
-            <form id="borrowform" action="BookReservationServlet" method="post">
-			 <input type="hidden" name="resourceID" id="rname" />
-			 <input type="hidden" name="userid" value="${userid}" />
-	         	</form>
         </div>
     </div>
-    </div>
-    </div>
-    </div>
+-->
 
 
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
@@ -143,4 +233,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 </body>
+
 </html>
