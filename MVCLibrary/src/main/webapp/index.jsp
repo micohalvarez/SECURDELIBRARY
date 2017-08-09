@@ -76,8 +76,8 @@
 
 <div class="container-fluid">
  <div class="row">
-  <div class="col-sm-4 offset-sm-4 align-self-center text-center mt-5">
-   <p class="lead text-header text-muted">Log In</p>
+  <div class="col-sm-4 offset-sm-4 align-self-center bg-white bordered text-center mt-5">
+   <p class="lead text-header lead mt-3">Log In</p>
    <form action = "/signIn" method="post" modelAttribute="user">
     <div class="form-group pt-3">
      <input type="text" class="form-control" placeholder="Username" name = "username">
