@@ -107,7 +107,28 @@
                         <button type="submit" class="btn btn-outline-success">Reserve Room</button>
                     </div>
                 </div>
-
+                <div class="row">
+                        <div class="col m-3">
+                            <p class="lead pl-4 mb-0">Admin Controls</p>
+                            <div class="row pl-4 mt-0">
+                                <div class="col-3">
+                                    <form>
+                                        <button type="submit" class="btn btn-outline-success full-width mt-3">Create Library Manager</button>
+                                    </form>
+                                </div>
+                                <div class="col-3">
+                                    <form>
+                                        <button type="submit" class="btn btn-outline-success full-width mt-3">Create Library Staff</button>
+                                    </form>
+                                </div>
+                                <div class="col-3">
+                                    <form>
+                                        <button type="submit" class="btn btn-outline-success full-width mt-3">Unlock Account</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             </div>
         </div>
     </div>
