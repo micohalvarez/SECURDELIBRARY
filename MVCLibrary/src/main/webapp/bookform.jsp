@@ -52,13 +52,23 @@
     </style>
 </head>
 <body class="bg-faded">
-<div class="container-fluid">
-    <nav class="navbar fixed-top navbar-light nav-border bg-white">
-        <a class="navbar-brand">
-            <img src="img/dlsu_signature.png" height="40" alt="">
-        </a>
-    </nav>
-</div>
+    <div class="container-fluid">
+        <nav class="navbar fixed-top navbar-light nav-border bg-white">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand">
+                <img src="img/dlsu_signature.png" height="40" alt="">
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="#">Home</a>
+                    <!--                    <a class="nav-item nav-link" href="#">Browse</a>-->
+                    <a class="nav-item nav-link" href="room.html">Rooms</a>
+                </div>
+            </div>
+        </nav>
+    </div>
 
 <div class="container-fluid" hidden = "hidden">
     <div class="row">
