@@ -63,7 +63,6 @@
         $(document).ready(function() {
 
             $(".add_book").click(function() {
-
                 $("#addform").submit();
             });
             $(".book_title").click(function() {

@@ -59,10 +59,14 @@
     <script>
         $(document).ready(function() {
 
-            $(".add").click(function() {
+            $(".add_book").click(function() {
                 $("#addform").submit();
             });
-
+            $(".book_title").click(function() {
+                var name = $(this).text();
+                $("#rname").val(name);
+                $("#editform").submit();
+            });
         });
     </script>
 </head>
@@ -156,13 +160,15 @@
                         <p class="lead pl-4 mb-0">Controls</p>
                         <div class="row pl-4 mt-0">
                             <div class="col-3">
-                                <form>
+                                <form:form action="/addbook" method = "post" id="addform">
                                     <button type="submit" class="btn btn-outline-success full-width mt-3">Add Resource</button>
-                                </form>
+                                    <input type="hidden" name="userid" value = "${user.userID}" />
+                                </form:form>
                             </div>
                             <div class="col-3">
-                                <form>
+                            <form:form action="/creuser" method = "post" id="addform">
                                     <button type="submit" class="btn btn-outline-success full-width mt-3">Create Account</button>
+                                <input type="hidden" name="admin" value="${user.userType}">
                                 </form>
                             </div>
                             <div class="col-3">

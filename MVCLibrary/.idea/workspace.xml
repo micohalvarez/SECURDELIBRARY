@@ -17,8 +17,77 @@
       <file leaf-file-name="home.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/home.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2730">
-              <caret line="130" column="37" lean-forward="false" selection-start-line="130" selection-start-column="37" selection-end-line="130" selection-end-column="37" />
+            <state relative-caret-position="193">
+              <caret line="170" column="91" lean-forward="false" selection-start-line="170" selection-start-column="91" selection-end-line="170" selection-end-column="91" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ResourceController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/app/com/controller/ResourceController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="503">
+              <caret line="71" column="35" lean-forward="false" selection-start-line="71" selection-start-column="27" selection-end-line="71" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bookform.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/bookform.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-63">
+              <caret line="72" column="28" lean-forward="true" selection-start-line="72" selection-start-column="28" selection-end-line="72" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ResourceDAOImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/app/com/service/ResourceDAOImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="298">
+              <caret line="266" column="61" lean-forward="false" selection-start-line="266" selection-start-column="61" selection-end-line="266" selection-end-column="61" />
+              <folding>
+                <element signature="e#1618#1628#0" expanded="true" />
+                <marker date="1502420863722" expanded="true" signature="723:737" ph="SELECT * FRO... resources" />
+                <marker date="1502420863722" expanded="true" signature="723:760" ph="SELECT * FRO... resources" />
+                <marker date="1502420863722" expanded="true" signature="2179:2193" ph="SELECT * FRO... resources" />
+                <marker date="1502420863722" expanded="true" signature="3118:3204" ph="SELECT * FRO... resources" />
+                <marker date="1502420863722" expanded="true" signature="4146:4193" ph="SELECT * FRO... resources" />
+                <marker date="1502420863722" expanded="true" signature="4146:4194" ph="SELECT * FRO... resources" />
+                <marker date="1502420863722" expanded="true" signature="4146:4206" ph="SELECT * FRO... resources" />
+                <marker date="1502420863722" expanded="true" signature="4146:4221" ph="SELECT * FRO... resources" />
+                <marker date="1502420863722" expanded="true" signature="4146:4229" ph="SELECT * FRO... resources" />
+                <marker date="1502420863722" expanded="true" signature="4146:4231" ph="SELECT * FRO... resources" />
+                <marker date="1502420863722" expanded="true" signature="5240:5324" ph="SELECT * FRO... resources" />
+                <marker date="1502420863722" expanded="true" signature="6339:6423" ph="SELECT * FRO... resources" />
+                <marker date="1502420863722" expanded="true" signature="7377:7391" ph="SELECT * FRO... resources" />
+                <marker date="1502420863722" expanded="true" signature="7377:7421" ph="SELECT * FRO... status" />
+                <marker date="1502420863722" expanded="true" signature="7377:7422" ph="SELECT * FRO... status" />
+                <marker date="1502420863722" expanded="true" signature="7377:7492" ph="SELECT * FRO... status" />
+                <marker date="1502420863722" expanded="true" signature="8293:8384" ph="INSERT INTO status... " />
+                <marker date="1502420863722" expanded="true" signature="8513:8565" ph="UPDATE resou... " />
+                <marker date="1502420863722" expanded="true" signature="8789:8880" ph="INSERT INTO status... " />
+                <marker date="1502420863722" expanded="true" signature="9009:9061" ph="UPDATE resou... " />
+                <marker date="1502420863722" expanded="true" signature="9283:9374" ph="INSERT INTO status... " />
+                <marker date="1502420863722" expanded="true" signature="9506:9558" ph="UPDATE resou... " />
+                <marker date="1502420863722" expanded="true" signature="9744:9829" ph="INSERT INTO resources... " />
+                <marker date="1502420863722" expanded="true" signature="9744:9859" ph="INSERT INTO resources... " />
+                <marker date="1502420863722" expanded="true" signature="10102:10220" ph="UPDATE resou... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bookdetails.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/bookdetails.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-200">
+              <caret line="101" column="28" lean-forward="true" selection-start-line="101" selection-start-column="28" selection-end-line="101" selection-end-column="85" />
               <folding />
             </state>
           </provider>
@@ -58,73 +127,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserDAOImpl.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/app/com/service/UserDAOImpl.java">
+      <file leaf-file-name="resource.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resource.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="55" column="58" lean-forward="false" selection-start-line="55" selection-start-column="58" selection-end-line="55" selection-end-column="58" />
-              <folding>
-                <element signature="e#3270#3907#0" expanded="true" />
-                <element signature="e#3906#3907#0" expanded="true" />
-                <element signature="e#4153#4790#0" expanded="true" />
-                <element signature="e#4789#4790#0" expanded="true" />
-                <element signature="e#4900#4906#0" expanded="true" />
-                <element signature="e#6324#7081#0" expanded="true" />
-                <element signature="e#7080#7081#0" expanded="true" />
-                <marker date="1502419504237" expanded="true" signature="1345:1939" ph="INSERT INTO users... " />
-                <marker date="1502419504237" expanded="true" signature="1345:1940" ph="INSERT INTO users... " />
-                <marker date="1502419504237" expanded="true" signature="1345:1941" ph="INSERT INTO users... " />
-                <marker date="1502419504237" expanded="true" signature="1345:1994" ph="INSERT INTO users... " />
-                <marker date="1502419504237" expanded="true" signature="1345:2006" ph="INSERT INTO users... " />
-                <marker date="1502419504237" expanded="true" signature="3085:3192" ph="SELECT * FRO... users" />
-                <marker date="1502419504237" expanded="true" signature="4014:4084" ph="SELECT * FRO... users" />
-                <marker date="1502419504237" expanded="true" signature="6189:6259" ph="SELECT * FRO... users" />
-                <marker date="1502419504237" expanded="true" signature="7362:7431" ph="Update users... " />
-                <marker date="1502419504237" expanded="true" signature="7535:7609" ph="Update users... " />
-                <marker date="1502419504237" expanded="true" signature="7535:7610" ph="Update users... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/app/com/service/UserDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state relative-caret-position="367">
+              <caret line="117" column="38" lean-forward="true" selection-start-line="117" selection-start-column="38" selection-end-line="117" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/app/com/model/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="55" column="24" lean-forward="false" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1587#1588#0" expanded="true" />
-                <element signature="e#1616#1617#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="register.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/register.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1449">
-              <caret line="69" column="86" lean-forward="false" selection-start-line="69" selection-start-column="86" selection-end-line="69" selection-end-column="86" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/app/com/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
+            <state relative-caret-position="-42">
               <caret line="64" column="51" lean-forward="false" selection-start-line="64" selection-start-column="51" selection-end-line="64" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -183,12 +199,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/room.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/booklist.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/app/com/service/ResourceDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/home.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resource.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/bookform.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/app/com/controller/ResourceController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/bookdetails.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/app/com/service/ResourceDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/editbook.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/app/com/controller/HomeController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/register.jsp" />
@@ -200,6 +210,12 @@
         <option value="$PROJECT_DIR$/src/main/java/app/com/model/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/com/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/com/service/UserDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/bookdetails.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/app/com/controller/ResourceController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/bookform.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/app/com/service/ResourceDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resource.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/home.jsp" />
       </list>
     </option>
   </component>
@@ -1003,12 +1019,12 @@
       <workItem from="1502329183467" duration="3724000" />
       <workItem from="1502341754455" duration="15884000" />
       <workItem from="1502381849377" duration="21904000" />
-      <workItem from="1502418767461" duration="757000" />
+      <workItem from="1502418767461" duration="2212000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101451000" />
+    <option name="totallyTimeSpent" value="102906000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -1037,7 +1053,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25052083" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1875" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
@@ -1048,6 +1064,41 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39956093" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32821077" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25052083" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
@@ -1122,31 +1173,31 @@
           <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding>
             <element signature="e#1618#1628#0" expanded="true" />
-            <marker date="1502390260683" expanded="true" signature="723:737" ph="SELECT * FRO... resources" />
-            <marker date="1502390260683" expanded="true" signature="723:760" ph="SELECT * FRO... resources" />
-            <marker date="1502390260683" expanded="true" signature="2179:2193" ph="SELECT * FRO... resources" />
-            <marker date="1502390260683" expanded="true" signature="3118:3204" ph="SELECT * FRO... resources" />
-            <marker date="1502390260683" expanded="true" signature="4146:4193" ph="SELECT * FRO... resources" />
-            <marker date="1502390260683" expanded="true" signature="4146:4194" ph="SELECT * FRO... resources" />
-            <marker date="1502390260683" expanded="true" signature="4146:4206" ph="SELECT * FRO... resources" />
-            <marker date="1502390260683" expanded="true" signature="4146:4221" ph="SELECT * FRO... resources" />
-            <marker date="1502390260683" expanded="true" signature="4146:4229" ph="SELECT * FRO... resources" />
-            <marker date="1502390260683" expanded="true" signature="4146:4231" ph="SELECT * FRO... resources" />
-            <marker date="1502390260683" expanded="true" signature="5240:5324" ph="SELECT * FRO... resources" />
-            <marker date="1502390260683" expanded="true" signature="6339:6423" ph="SELECT * FRO... resources" />
-            <marker date="1502390260683" expanded="true" signature="7377:7391" ph="SELECT * FRO... resources" />
-            <marker date="1502390260683" expanded="true" signature="7377:7421" ph="SELECT * FRO... status" />
-            <marker date="1502390260683" expanded="true" signature="7377:7422" ph="SELECT * FRO... status" />
-            <marker date="1502390260683" expanded="true" signature="7377:7492" ph="SELECT * FRO... status" />
-            <marker date="1502390260683" expanded="true" signature="8293:8384" ph="INSERT INTO status... " />
-            <marker date="1502390260683" expanded="true" signature="8513:8565" ph="UPDATE resou... " />
-            <marker date="1502390260683" expanded="true" signature="8789:8880" ph="INSERT INTO status... " />
-            <marker date="1502390260683" expanded="true" signature="9009:9061" ph="UPDATE resou... " />
-            <marker date="1502390260683" expanded="true" signature="9283:9374" ph="INSERT INTO status... " />
-            <marker date="1502390260683" expanded="true" signature="9506:9558" ph="UPDATE resou... " />
-            <marker date="1502390260683" expanded="true" signature="9744:9829" ph="INSERT INTO resources... " />
-            <marker date="1502390260683" expanded="true" signature="9744:9870" ph="INSERT INTO resources... " />
-            <marker date="1502390260683" expanded="true" signature="10128:10246" ph="UPDATE resou... " />
+            <marker date="1502420863722" expanded="true" signature="723:737" ph="SELECT * FRO... resources" />
+            <marker date="1502420863722" expanded="true" signature="723:760" ph="SELECT * FRO... resources" />
+            <marker date="1502420863722" expanded="true" signature="2179:2193" ph="SELECT * FRO... resources" />
+            <marker date="1502420863722" expanded="true" signature="3118:3204" ph="SELECT * FRO... resources" />
+            <marker date="1502420863722" expanded="true" signature="4146:4193" ph="SELECT * FRO... resources" />
+            <marker date="1502420863722" expanded="true" signature="4146:4194" ph="SELECT * FRO... resources" />
+            <marker date="1502420863722" expanded="true" signature="4146:4206" ph="SELECT * FRO... resources" />
+            <marker date="1502420863722" expanded="true" signature="4146:4221" ph="SELECT * FRO... resources" />
+            <marker date="1502420863722" expanded="true" signature="4146:4229" ph="SELECT * FRO... resources" />
+            <marker date="1502420863722" expanded="true" signature="4146:4231" ph="SELECT * FRO... resources" />
+            <marker date="1502420863722" expanded="true" signature="5240:5324" ph="SELECT * FRO... resources" />
+            <marker date="1502420863722" expanded="true" signature="6339:6423" ph="SELECT * FRO... resources" />
+            <marker date="1502420863722" expanded="true" signature="7377:7391" ph="SELECT * FRO... resources" />
+            <marker date="1502420863722" expanded="true" signature="7377:7421" ph="SELECT * FRO... status" />
+            <marker date="1502420863722" expanded="true" signature="7377:7422" ph="SELECT * FRO... status" />
+            <marker date="1502420863722" expanded="true" signature="7377:7492" ph="SELECT * FRO... status" />
+            <marker date="1502420863722" expanded="true" signature="8293:8384" ph="INSERT INTO status... " />
+            <marker date="1502420863722" expanded="true" signature="8513:8565" ph="UPDATE resou... " />
+            <marker date="1502420863722" expanded="true" signature="8789:8880" ph="INSERT INTO status... " />
+            <marker date="1502420863722" expanded="true" signature="9009:9061" ph="UPDATE resou... " />
+            <marker date="1502420863722" expanded="true" signature="9283:9374" ph="INSERT INTO status... " />
+            <marker date="1502420863722" expanded="true" signature="9506:9558" ph="UPDATE resou... " />
+            <marker date="1502420863722" expanded="true" signature="9744:9829" ph="INSERT INTO resources... " />
+            <marker date="1502420863722" expanded="true" signature="9744:9859" ph="INSERT INTO resources... " />
+            <marker date="1502420863722" expanded="true" signature="10102:10220" ph="UPDATE resou... " />
           </folding>
         </state>
       </provider>
@@ -1197,13 +1248,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/app/com/service/UserService.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/com/service/RoomDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/app/com/controller/CommentController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
@@ -1252,6 +1296,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="7" column="56" lean-forward="false" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1297,7 +1342,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/bookform.jsp" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/editbook.jsp" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
@@ -1307,26 +1351,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resource.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1240">
-          <caret line="121" column="50" lean-forward="true" selection-start-line="121" selection-start-column="50" selection-end-line="121" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="64">
           <caret line="12" column="37" lean-forward="true" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/com/model/Roles.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1348,14 +1376,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/home.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2730">
-          <caret line="130" column="37" lean-forward="false" selection-start-line="130" selection-start-column="37" selection-end-line="130" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/register.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1449">
@@ -1374,67 +1394,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/com/controller/ResourceController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="48" column="8" lean-forward="false" selection-start-line="48" selection-start-column="7" selection-end-line="48" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/com/service/ResourceDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-311">
-          <caret line="246" column="8" lean-forward="false" selection-start-line="246" selection-start-column="8" selection-end-line="246" selection-end-column="51" />
-          <folding>
-            <element signature="e#1618#1628#0" expanded="true" />
-            <marker date="1502390260683" expanded="true" signature="723:737" ph="SELECT * FRO... resources" />
-            <marker date="1502390260683" expanded="true" signature="723:760" ph="SELECT * FRO... resources" />
-            <marker date="1502390260683" expanded="true" signature="2179:2193" ph="SELECT * FRO... resources" />
-            <marker date="1502390260683" expanded="true" signature="3118:3204" ph="SELECT * FRO... resources" />
-            <marker date="1502390260683" expanded="true" signature="4146:4193" ph="SELECT * FRO... resources" />
-            <marker date="1502390260683" expanded="true" signature="4146:4194" ph="SELECT * FRO... resources" />
-            <marker date="1502390260683" expanded="true" signature="4146:4206" ph="SELECT * FRO... resources" />
-            <marker date="1502390260683" expanded="true" signature="4146:4221" ph="SELECT * FRO... resources" />
-            <marker date="1502390260683" expanded="true" signature="4146:4229" ph="SELECT * FRO... resources" />
-            <marker date="1502390260683" expanded="true" signature="4146:4231" ph="SELECT * FRO... resources" />
-            <marker date="1502390260683" expanded="true" signature="5240:5324" ph="SELECT * FRO... resources" />
-            <marker date="1502390260683" expanded="true" signature="6339:6423" ph="SELECT * FRO... resources" />
-            <marker date="1502390260683" expanded="true" signature="7377:7391" ph="SELECT * FRO... resources" />
-            <marker date="1502390260683" expanded="true" signature="7377:7421" ph="SELECT * FRO... status" />
-            <marker date="1502390260683" expanded="true" signature="7377:7422" ph="SELECT * FRO... status" />
-            <marker date="1502390260683" expanded="true" signature="7377:7492" ph="SELECT * FRO... status" />
-            <marker date="1502390260683" expanded="true" signature="8293:8384" ph="INSERT INTO status... " />
-            <marker date="1502390260683" expanded="true" signature="8513:8565" ph="UPDATE resou... " />
-            <marker date="1502390260683" expanded="true" signature="8789:8880" ph="INSERT INTO status... " />
-            <marker date="1502390260683" expanded="true" signature="9009:9061" ph="UPDATE resou... " />
-            <marker date="1502390260683" expanded="true" signature="9283:9374" ph="INSERT INTO status... " />
-            <marker date="1502390260683" expanded="true" signature="9506:9558" ph="UPDATE resou... " />
-            <marker date="1502390260683" expanded="true" signature="9744:9829" ph="INSERT INTO resources... " />
-            <marker date="1502390260683" expanded="true" signature="9744:9870" ph="INSERT INTO resources... " />
-            <marker date="1502390260683" expanded="true" signature="10128:10246" ph="UPDATE resou... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/bookdetails.jsp" />
     <entry file="file://$PROJECT_DIR$/src/main/java/app/com/service/UserDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/com/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="64" column="51" lean-forward="false" selection-start-line="64" selection-start-column="51" selection-end-line="64" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1473,6 +1437,111 @@
             <marker date="1502419504237" expanded="true" signature="7362:7431" ph="Update users... " />
             <marker date="1502419504237" expanded="true" signature="7535:7609" ph="Update users... " />
             <marker date="1502419504237" expanded="true" signature="7535:7610" ph="Update users... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/com/model/Roles.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/com/service/RoomDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding>
+            <marker date="1502287576955" expanded="true" signature="553:567" ph="SELECT * FRO... rooms" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/com/service/ResourceDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="266" column="61" lean-forward="false" selection-start-line="266" selection-start-column="61" selection-end-line="266" selection-end-column="61" />
+          <folding>
+            <element signature="e#1618#1628#0" expanded="true" />
+            <marker date="1502420863722" expanded="true" signature="723:737" ph="SELECT * FRO... resources" />
+            <marker date="1502420863722" expanded="true" signature="723:760" ph="SELECT * FRO... resources" />
+            <marker date="1502420863722" expanded="true" signature="2179:2193" ph="SELECT * FRO... resources" />
+            <marker date="1502420863722" expanded="true" signature="3118:3204" ph="SELECT * FRO... resources" />
+            <marker date="1502420863722" expanded="true" signature="4146:4193" ph="SELECT * FRO... resources" />
+            <marker date="1502420863722" expanded="true" signature="4146:4194" ph="SELECT * FRO... resources" />
+            <marker date="1502420863722" expanded="true" signature="4146:4206" ph="SELECT * FRO... resources" />
+            <marker date="1502420863722" expanded="true" signature="4146:4221" ph="SELECT * FRO... resources" />
+            <marker date="1502420863722" expanded="true" signature="4146:4229" ph="SELECT * FRO... resources" />
+            <marker date="1502420863722" expanded="true" signature="4146:4231" ph="SELECT * FRO... resources" />
+            <marker date="1502420863722" expanded="true" signature="5240:5324" ph="SELECT * FRO... resources" />
+            <marker date="1502420863722" expanded="true" signature="6339:6423" ph="SELECT * FRO... resources" />
+            <marker date="1502420863722" expanded="true" signature="7377:7391" ph="SELECT * FRO... resources" />
+            <marker date="1502420863722" expanded="true" signature="7377:7421" ph="SELECT * FRO... status" />
+            <marker date="1502420863722" expanded="true" signature="7377:7422" ph="SELECT * FRO... status" />
+            <marker date="1502420863722" expanded="true" signature="7377:7492" ph="SELECT * FRO... status" />
+            <marker date="1502420863722" expanded="true" signature="8293:8384" ph="INSERT INTO status... " />
+            <marker date="1502420863722" expanded="true" signature="8513:8565" ph="UPDATE resou... " />
+            <marker date="1502420863722" expanded="true" signature="8789:8880" ph="INSERT INTO status... " />
+            <marker date="1502420863722" expanded="true" signature="9009:9061" ph="UPDATE resou... " />
+            <marker date="1502420863722" expanded="true" signature="9283:9374" ph="INSERT INTO status... " />
+            <marker date="1502420863722" expanded="true" signature="9506:9558" ph="UPDATE resou... " />
+            <marker date="1502420863722" expanded="true" signature="9744:9829" ph="INSERT INTO resources... " />
+            <marker date="1502420863722" expanded="true" signature="9744:9859" ph="INSERT INTO resources... " />
+            <marker date="1502420863722" expanded="true" signature="10102:10220" ph="UPDATE resou... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/bookform.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-63">
+          <caret line="72" column="28" lean-forward="true" selection-start-line="72" selection-start-column="28" selection-end-line="72" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/bookdetails.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-200">
+          <caret line="101" column="28" lean-forward="true" selection-start-line="101" selection-start-column="28" selection-end-line="101" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resource.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="117" column="38" lean-forward="true" selection-start-line="117" selection-start-column="38" selection-end-line="117" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/home.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="170" column="91" lean-forward="false" selection-start-line="170" selection-start-column="91" selection-end-line="170" selection-end-column="91" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/com/controller/ResourceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="503">
+          <caret line="71" column="35" lean-forward="false" selection-start-line="71" selection-start-column="27" selection-end-line="71" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/com/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-42">
+          <caret line="64" column="51" lean-forward="false" selection-start-line="64" selection-start-column="51" selection-end-line="64" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

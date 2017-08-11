@@ -109,8 +109,9 @@
 
                         <div class="row">
                             <div class="col-2">
-                                <form>
+                                <form:form action="/addbook" method = "post" id="addform">
                                     <button type="submit" class="btn btn-outline-success full-width mt-3">Add</button>
+                                    <input type="hidden" name="userid" value = "${user.userID}" />
                                 </form>
                             </div>
                             <div class="col-2">

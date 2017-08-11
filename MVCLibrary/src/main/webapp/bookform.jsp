@@ -14,7 +14,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Register</title>
+    <title>Add Book</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
@@ -70,7 +70,7 @@
         </nav>
     </div>
 
-<div class="container-fluid" hidden = "hidden">
+<div class="container-fluid">
     <div class="row">
         <div class="col-4 offset-4 bg-white align-self-center bordered mt-5 p-4">
             <p class="lead text-header text-center">Add a Book</p>

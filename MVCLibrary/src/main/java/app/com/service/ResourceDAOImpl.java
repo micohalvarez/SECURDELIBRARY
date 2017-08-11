@@ -263,8 +263,8 @@ public class ResourceDAOImpl implements ResourceDAO {
     @Override
     public void addBook(Resource book) {
         String sql = "INSERT INTO resources SET title=?, location=?, tags=?, author=?, publisher=?, type=?,"
-                + "tags=?,"+ " status=?";
-        temp.update(sql, book.getTitle(), book.getLocation(),book.getTags(), book.getAuthor(),
+                + " status=?";
+        temp.update(sql, book.getTitle(), book.getLocation(), book.getAuthor(),
                 book.getPublisher(), book.getType(), book.getTags(), 0);
 
 
