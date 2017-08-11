@@ -57,19 +57,9 @@
 <body class="bg-faded">
     <div class="container-fluid">
         <nav class="navbar fixed-top navbar-light nav-border bg-white">
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
             <a class="navbar-brand">
                 <img src="img/dlsu_signature.png" height="40" alt="">
             </a>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-item nav-link active" href="#">Home</a>
-                    <!--                    <a class="nav-item nav-link" href="#">Browse</a>-->
-                    <a class="nav-item nav-link" href="room.html">Rooms</a>
-                </div>
-            </div>
         </nav>
     </div>
 
@@ -85,43 +75,53 @@
                         </small>
                     </div>
                     <div class="col-10 pt-4">
-                        <p class="lead text-header">${resource.title}</p>
+                        <p class="lead text-header">${book.title}</p>
                         <hr>
                         <table class="full-width">
                             <tr>
                                 <td width="20%">Location:</td>
-                                <td width="80%">${resource.location}</td>
+                                <td width="80%">${book.location}</td>
                             </tr>
                             <tr>
                                 <td width="20%">Author:</td>
-                                <td width="80%">${author.lastname}, ${author.firstname}</td>
+                                <td width="80%">${book.author}</td>
                             </tr>
                             <tr>
                                 <td width="20%">Publisher:</td>
-                                <td width="80%">${publisher.name}</td>
+                                <td width="80%">${book.publisher}</td>
                             </tr>
                        
                             <tr>
                                 <td width="20%">Tags:</td>
-                                <td width="80%">${resource.tags}</td>
+                                <td width="80%">${book.tags}</td>
                             </tr>
                         </table>
                         <div class="row">
                             <div class="col mt-5">
                                 <p class="lead text-header">Borrow Resource</p>
 
+                                
+
                                 <div class="row mb-3">
                                     <div class="col-2">
                                         <p>Status:</p>
                                     </div>
-                                   <form id="borrowform" action="ReserveResourceServlet" method="post"> 
-                                   <div class="col-2 text-success">
-                                        AVAILABLE
+                                    <form action="/borrowBook" id="borrowForm" method = "post">
+                                        <input type="hidden" value="${book.resourceID}" name="bookid">
+                                        <input type="hidden" value="${userid}" name="userID">
+
+                                       <c:if test="${book.status == 0}">
+                                        <div class="col text-success">
                                         <button type="submit" class="btn btn-success full-width mt-3 borrow_resource">Borrow</button>
-                                        <input type="hidden" name="resourceID" id="rname" />
-										 <input type="hidden" name="userid" value="${userid}" />
+                                        </div>
+                                       </c:if>
+                                           <c:if test="${book.status == 1}">
+                                            <div class="col text-success">
+                                           <button type="button" class="btn btn-success disabled full-width mt-3" disabled>Borrow</button>
+                                            </div>
+                                           </c:if>
                                     </div>
-                                    </form>
+                                </form>
                                 </div>
 
                                 <%--<div class="row mb-3">--%>
@@ -145,55 +145,6 @@
                                         <%--<button type="submit" class="btn btn-success disabled full-width mt-3">Borrow</button>--%>
                                     <%--</div>--%>
                                 <%--</div>--%>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col">
-                                <p class="lead text-header mt-5">Reviews</p>
-
-                                <div class="row">
-                                    <div class="col-9">
-                                        <form>
-                                            <div class="form-group row">
-                                                <div class="col">
-                                                    <textarea class="form-control" rows="5" placeholder="Write a review"></textarea>
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <div class="col-2">
-                                                    <button type="submit" class="btn btn-success full-width">Submit</button>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <p class="mt-3 lead">All reviews</p>
-                                    <hr>
-                                    <div class="row ml-3">
-                                        <div class="col-11">
-                                            <p>Great read!</p>
-                                            <p class="small">Kim Martinez - 2017/02/13</p>
-                                            <hr>
-                                        </div>
-                                    </div>
-                                    <div class="row ml-3">
-                                        <div class="col-11">
-                                            <p>This book was very helpful for my INTRNLP class. It explains the fundamentals well</p>
-                                            <p class="small">Micoh Alvarez - 2017/02/13</p>
-                                            <hr>
-                                        </div>
-                                    </div>
-                                    <div class="row ml-3">
-                                        <div class="col-11">
-                                            <p>Had to wait long to borrow</p>
-                                            <p class="small">Micoh Alvarez - 2017/02/13</p>
-                                            <hr>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>

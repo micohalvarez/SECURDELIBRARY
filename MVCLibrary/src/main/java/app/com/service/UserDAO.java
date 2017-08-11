@@ -9,7 +9,11 @@ import java.util.List;
  */
 public interface UserDAO {
 
-    public void addUser(User user);
+    public int addUser(User user);
     public List<User> getUser(String username, String password);
     public void deleteUser(int userID);
+    public List<User> getUserbyUN(String username);
+    public void updatelog(String name);
+
+
 }

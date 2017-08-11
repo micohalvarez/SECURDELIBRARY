@@ -1,5 +1,6 @@
 package app.com.model;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 /**
@@ -28,10 +29,39 @@ public class User {
     private String birthday;
     private String secAns;
     private String idNumber;
-    private String userType;
+    private int userType;
     private String firstname;
     private String lastname;
     private String initial;
+    private int failure;
+
+    public int getFailure() {
+        return failure;
+    }
+
+    public void setFailure(int failure) {
+        this.failure = failure;
+    }
+
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
+
+    private LocalDate date;
+
+    public int getLock() {
+        return lock;
+    }
+
+    public void setLock(int lock) {
+        this.lock = lock;
+    }
+
+    private int lock;
 
     public String getFirstname() {
         return firstname;
@@ -102,10 +132,10 @@ public class User {
     public void setIdNumber(String idNumber) {
         this.idNumber = idNumber;
     }
-    public String getUserType() {
+    public int getUserType() {
         return userType;
     }
-    public void setUserType(String userType) {
+    public void setUserType(int userType) {
         this.userType = userType;
     }
 

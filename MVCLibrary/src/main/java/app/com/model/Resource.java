@@ -10,10 +10,22 @@ public class Resource {
 	public final static String COLUMN_AUTHOR = "author";
 	public final static String COLUMN_PUBLISHER = "publisher";
 	public final static String COLUMN_TYPE = "type";
+	public final static String COLUMN_AVAILABLE = "available";
+	public final static String COLUMN_STATUS = "status";
+
 	
 	
 	private int resourceID;
-	private String location,title,tags,author,publisher,type;
+	private String location;
+	private String title;
+	private String tags;
+	private String author;
+	private String publisher;
+	private String type;
+
+
+
+	private String status;
 	public int getResourceID() {
 		return resourceID;
 	}
@@ -32,8 +44,14 @@ public class Resource {
 	public void setAuthor(String author) {
 		this.author = author;
 	}
-	public String getPublisherID() {
+	public String getPublisher() {
 		return publisher;
+	}public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
 	}
 	public void setPublisher(String publisher) {
 		this.publisher = publisher;

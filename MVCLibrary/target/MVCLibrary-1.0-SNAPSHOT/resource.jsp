@@ -75,66 +75,76 @@
                         </small>
                     </div>
                     <div class="col-10 pt-4">
-                        <p class="lead text-header">${resource.title}</p>
+                        <p class="lead text-header">${book.title}</p>
                         <hr>
                         <table class="full-width">
                             <tr>
                                 <td width="20%">Location:</td>
-                                <td width="80%">${resource.location}</td>
+                                <td width="80%">${book.location}</td>
                             </tr>
                             <tr>
                                 <td width="20%">Author:</td>
-                                <td width="80%">${author.lastname}, ${author.firstname}</td>
+                                <td width="80%">${book.author}</td>
                             </tr>
                             <tr>
                                 <td width="20%">Publisher:</td>
-                                <td width="80%">${publisher.name}</td>
+                                <td width="80%">${book.publisher}</td>
                             </tr>
                        
                             <tr>
                                 <td width="20%">Tags:</td>
-                                <td width="80%">${resource.tags}</td>
+                                <td width="80%">${book.tags}</td>
                             </tr>
                         </table>
                         <div class="row">
                             <div class="col mt-5">
                                 <p class="lead text-header">Borrow Resource</p>
 
+                                
+
                                 <div class="row mb-3">
                                     <div class="col-2">
                                         <p>Status:</p>
                                     </div>
-                                   <form id="borrowform" action="ReserveResourceServlet" method="post"> 
-                                   <div class="col-2 text-success">
-                                        AVAILABLE
+                                    <form action="/borrowBook" id="borrowForm" method = "post">
+                                        <input type="hidden" value="${book.resourceID}" name="bookid">
+                                        <input type="hidden" value="${userid}" name="userID">
+
+                                       <c:if test="${book.status == 0}">
+                                        <div class="col text-success">
                                         <button type="submit" class="btn btn-success full-width mt-3 borrow_resource">Borrow</button>
-                                        <input type="hidden" name="resourceID" id="rname" />
-										 <input type="hidden" name="userid" value="${userid}" />
+                                        </div>
+                                       </c:if>
+                                           <c:if test="${book.status == 1}">
+                                            <div class="col text-success">
+                                           <button type="button" class="btn btn-success disabled full-width mt-3" disabled>Borrow</button>
+                                            </div>
+                                           </c:if>
                                     </div>
-                                    </form>
+                                </form>
                                 </div>
 
-                                <div class="row mb-3">
-                                    <div class="col-2">
-                                        <p>Status:</p>
-                                    </div>
-                                    <div class="col-2 text-danger">
-                                        BORROWED
-                                        <br>
-                                        <small class="text-muted">[until July 22, 2017]</small>
-                                        <button type="submit" class="btn btn-success full-width mt-3">Reserve</button>
-                                    </div>
-                                </div>
+                                <%--<div class="row mb-3">--%>
+                                    <%--<div class="col-2">--%>
+                                        <%--<p>Status:</p>--%>
+                                    <%--</div>--%>
+                                    <%--<div class="col-2 text-danger">--%>
+                                        <%--BORROWED--%>
+                                        <%--<br>--%>
+                                        <%--<small class="text-muted">[until July 22, 2017]</small>--%>
+                                        <%--<button type="submit" class="btn btn-success full-width mt-3">Reserve</button>--%>
+                                    <%--</div>--%>
+                                <%--</div>--%>
 
-                                <div class="row mb-3">
-                                    <div class="col-2">
-                                        <p>Status:</p>
-                                    </div>
-                                    <div class="col-2 text-muted">
-                                        Library use only.
-                                        <button type="submit" class="btn btn-success disabled full-width mt-3">Borrow</button>
-                                    </div>
-                                </div>
+                                <%--<div class="row mb-3">--%>
+                                    <%--<div class="col-2">--%>
+                                        <%--<p>Status:</p>--%>
+                                    <%--</div>--%>
+                                    <%--<div class="col-2 text-muted">--%>
+                                        <%--Library use only.--%>
+                                        <%--<button type="submit" class="btn btn-success disabled full-width mt-3">Borrow</button>--%>
+                                    <%--</div>--%>
+                                <%--</div>--%>
                             </div>
                         </div>
                     </div>

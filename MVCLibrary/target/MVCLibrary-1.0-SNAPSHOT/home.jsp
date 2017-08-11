@@ -56,14 +56,50 @@
             padding: 14px;
         }
     </style>
+    <script>
+        $(document).ready(function() {
+
+            $(".add").click(function() {
+                $("#addform").submit();
+            });
+
+        });
+    </script>
 </head>
 
 <body class="bg-faded">
     <div class="container-fluid">
         <nav class="navbar fixed-top navbar-light nav-border bg-white">
+            <c:if test="${user.userType == 5}">
+            <form:form action="/creuser" method = "post" id="addform">
+                <input type="hidden" name="admin" value="${user.userType}">
+            <button type="submit" class="navbar-toggler navbar-toggler-right add"  aria-controls="navbarNav">
+            </button>
+            </form:form>
+            </c:if>
+            <c:if test="${user.userType == 4 || user.userType == 3}">
+                <form:form action="/bookdet" method = "post" id="addform">
+                    <input type="hidden" name="userid" value="${user.userID}">
+                    <button type="submit" class="navbar-toggler navbar-toggler-right add"  aria-controls="navbarNav">
+                    </button>
+                </form:form>
+            </c:if>
             <a class="navbar-brand">
                 <img src="img/dlsu_signature.png" height="40" alt="">
             </a>
+            <%--<div class="collapse navbar-collapse" id=""navbarNav>--%>
+                <%--<ul class="navbar-nav">--%>
+                    <%--<li class="nav-item active">--%>
+                        <%--<a class="nav-link" href="#">Home</a>--%>
+                    <%--</li>--%>
+                    <%--<li class="nav-item active">--%>
+                        <%--<a class="nav-link" href="#">Rooms</a>--%>
+                    <%--</li>--%>
+                    <%--<li class="nav-item active">--%>
+                        <%--<a class="nav-link" href="#">Sign Out></a>--%>
+                    <%--</li>--%>
+                <%--</ul>--%>
+            <%--</div>--%>
         </nav>
     </div>
 
@@ -76,11 +112,13 @@
                 <div class="row">
                     <div class="col-sm-6 m-3">
                         <p class="lead pl-4">Search for books, articles, magazines, and more</p>
+
                         <form:form action="/search" method="post" modelAttribute="user">
+                            <input type="hidden" value = "${user.userID}" name= "id">
                             <div class="form-group row no-gutters ml-4">
                                 <div class="col-10">
                                     <input type="text" class="form-control" name="keyword"/>
-                                </div>
+                                </div>}
                                 <div class="col-2">
                                     <button type="submit" class="btn btn-success full-width">Search</button>
                                 </div>
@@ -102,17 +140,17 @@
                             </div>
                         </form:form>
                     </div>
+
                     <div class="col-sm-3 offset-2 mt-3">
                         <p class="lead">Need a meeting room?</p>
                         <button type="submit" class="btn btn-outline-success">Reserve Room</button>
                     </div>
+
                 </div>
 
             </div>
         </div>
     </div>
-
-
 
 
     <!-- jQuery first, then Tether, then Bootstrap JS. -->

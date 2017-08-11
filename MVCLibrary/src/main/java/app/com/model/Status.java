@@ -5,14 +5,13 @@ import java.util.Date;
 public class Status {
 	public final static String TABLE_NAME = "status";
 	public final static String COLUMN_STATUSID = "statusID";
-	public final static String COLUMN_BOOKID = "bookID";
+	public final static String COLUMN_BOOKID = "resourceID";
 	public final static String COLUMN_USERID = "userID";
-	public final static String COLUMN_STARTDATE = "startdate";
 	public final static String COLUMN_ENDDATE = "enddate";
 	public final static String COLUMN_STATUS_TYPE = "statustype";
 	
 	private int statusID,bookID,userID,statustype;
-	private Date startDate,endDate;
+	private String startDate,endDate;
 	
 	public int getStatusID() {
 		return statusID;
@@ -38,16 +37,16 @@ public class Status {
 	public void setStatustype(int statustype) {
 		this.statustype = statustype;
 	}
-	public Date getStartDate() {
+	public String getStartDate() {
 		return startDate;
 	}
-	public void setStartDate(Date startDate) {
+	public void setStartDate(String startDate) {
 		this.startDate = startDate;
 	}
-	public Date getEndDate() {
+	public String getEndDate() {
 		return endDate;
 	}
-	public void setEndDate(Date endDate) {
+	public void setEndDate(String endDate) {
 		this.endDate = endDate;
 	}
 	
