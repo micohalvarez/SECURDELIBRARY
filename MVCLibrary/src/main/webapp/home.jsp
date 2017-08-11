@@ -149,7 +149,29 @@
                         <p class="lead">Need a meeting room?</p>
                         <button type="submit" class="btn btn-outline-success">Reserve Room</button>
                     </div>
+                </div>
 
+                <div class="row">
+                    <div class="col m-3">
+                        <p class="lead pl-4 mb-0">Controls</p>
+                        <div class="row pl-4 mt-0">
+                            <div class="col-3">
+                                <form>
+                                    <button type="submit" class="btn btn-outline-success full-width mt-3">Add Resource</button>
+                                </form>
+                            </div>
+                            <div class="col-3">
+                                <form>
+                                    <button type="submit" class="btn btn-outline-success full-width mt-3">Create Account</button>
+                                </form>
+                            </div>
+                            <div class="col-3">
+                                <form>
+                                    <button type="submit" class="btn btn-outline-success full-width mt-3">Unlock Account</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
