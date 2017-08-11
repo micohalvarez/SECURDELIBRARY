@@ -44,7 +44,7 @@ public class UserController {
         User us = userdao.getUserbyUN(user.getUsername()).get(0);
 
         BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-        if(encoder.matches(user.getPassword(), us.getPassword()) && us.getLock() == 0)
+        if(encoder.matches(user.getPassword(), us.getPassword()) && us.getLocked() == 0)
         {
 
             model.addObject("user",us);
@@ -62,8 +62,7 @@ public class UserController {
         }
 
         userdao.updatelog(us.getUsername());
-
-
+        session.setAttribute("user", users.get(0));
         model.setViewName("index");
 
         return model;

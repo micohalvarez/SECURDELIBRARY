@@ -53,15 +53,15 @@ public class User {
 
     private LocalDate date;
 
-    public int getLock() {
-        return lock;
+    public int getLocked() {
+        return locked;
     }
 
-    public void setLock(int lock) {
-        this.lock = lock;
+    public void setLocked(int lock) {
+        this.locked = lock;
     }
 
-    private int lock;
+    private int locked;
 
     public String getFirstname() {
         return firstname;
