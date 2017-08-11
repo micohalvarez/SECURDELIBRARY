@@ -63,7 +63,6 @@ public class HomeController {
         List<Resource> bookList = null;
 
         if(rb.contains("1")){
-
            bookList =  resourceDAO.getBooks(keyword);
         }
         else if(rb.contains("2")){

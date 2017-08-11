@@ -169,7 +169,7 @@
                             <form:form action="/creuser" method = "post" id="addform">
                                     <button type="submit" class="btn btn-outline-success full-width mt-3">Create Account</button>
                                 <input type="hidden" name="admin" value="${user.userType}">
-                                </form>
+                                </form:form>
                             </div>
                             <div class="col-3">
                                 <form>

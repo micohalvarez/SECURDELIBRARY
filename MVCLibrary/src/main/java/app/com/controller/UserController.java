@@ -89,7 +89,7 @@ public class UserController {
     @RequestMapping(value={"/reguser"}, method = RequestMethod.POST)
     public ModelAndView reguser(ModelAndView model) {
         model.addObject("usertype", 0);
-        model.addObject("user1", new User());
+        model.addObject("user", new User());
         model.setViewName("register");
         return model;
     }

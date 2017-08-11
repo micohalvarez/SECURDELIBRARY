@@ -109,14 +109,17 @@
 
                         <div class="row">
                             <div class="col-2">
-                                <form>
+                                <form:form action="/addbook" method = "post" id="addform">
                                     <button type="submit" class="btn btn-outline-success full-width mt-3">Add</button>
+                                    <input type="hidden" name="userid" value = "${userid}" />
                                 </form>
                             </div>
                             <div class="col-2">
-                                <form>
+                                <form:form id="editform" action="/editbook" method="post">
                                     <button type="submit" class="btn btn-outline-success full-width mt-3">Edit</button>
-                                </form>
+                                <input type="hidden" name="title" id="${book.title}" />
+                                <input type="hidden" name="userid" value = "${userid}" />
+                                </form:form>
                             </div>
                             <div class="col-2">
                                 <form>

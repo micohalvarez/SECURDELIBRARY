@@ -124,9 +124,9 @@
                         <form:form action="/search" method="post" modelAttribute="user">
                             <input type="hidden" value = "${user.userID}" name= "id">
                             <div class="form-group row no-gutters ml-4">
-                                <div class="col-10">
+                                <div class="col-9">
                                     <input type="text" class="form-control" name="keyword"/>
-                                </div>}
+                                </div>
                                 <div class="col-2">
                                     <button type="submit" class="btn btn-success full-width">Search</button>
                                 </div>
@@ -166,9 +166,10 @@
                                 </form:form>
                             </div>
                             <div class="col-3">
-                                <form>
+                            <form:form action="/creuser" method = "post" id="addform">
                                     <button type="submit" class="btn btn-outline-success full-width mt-3">Create Account</button>
-                                </form>
+                                <input type="hidden" name="admin" value="${user.userType}">
+                                </form:form>
                             </div>
                             <div class="col-3">
                                 <form>

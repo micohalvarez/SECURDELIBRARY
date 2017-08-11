@@ -64,7 +64,7 @@
         <div class="row">
             <div class="col-4 offset-4 bg-white align-self-center bordered mt-5 p-4">
                 <p class="lead text-header text-center">Sign Up</p>
-                <form:form action="/signUp"  method = "post" modelAttribute="user1" >
+                <form:form action="/signUp"  method = "post" modelAttribute="user" >
                     <div class="row">
                         <div class="col-9 form-group">
                             <form:input type="text" cssClass="form-control" placeholder="First Name" path ="firstname"/>

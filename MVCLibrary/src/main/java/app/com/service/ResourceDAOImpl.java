@@ -50,7 +50,7 @@ public class ResourceDAOImpl implements ResourceDAO {
 
         for(int i = 0 ; i < r.size(); i++){
             if(r.get(i).getAuthor().toLowerCase().contains(keyword.toLowerCase()) || r.get(i).getPublisher().toLowerCase().contains(keyword.toLowerCase()) || r.get(i).getTitle().toLowerCase().contains(keyword.toLowerCase())
-                        || r.get(i).getLocation().contains(keyword) || r.get(i).getTags().toLowerCase().contains(keyword.toLowerCase()))
+                        || r.get(i).getLocation().contains(keyword.toLowerCase()) || r.get(i).getTags().toLowerCase().contains(keyword.toLowerCase()))
                     fin.add(r.get(i));
         }
 
