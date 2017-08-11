@@ -53,7 +53,7 @@ public class UserDAOImpl implements UserDAO {
                     User.COLUMN_FIRSTNAME + " = ?," +
                     User.COLUMN_INITIAL + " = ?," +
                     User.COLUMN_LASTNAME + " = ?," +
-                    "failures = ?, lastfailure = ?, lock = ?";
+                    "failures = ?, lastfailure = ?, locked = ?";
 
             try {
                 temp.update(sql, u.getUsername(), u.getEmail(), hashed, u.getBirthday(), u.getSecAns(), u.getSecretquestion(), u.getUserType(), u.getIdNumber(),
@@ -206,7 +206,7 @@ public class UserDAOImpl implements UserDAO {
          System.out.print(dateNow);
          if(u.get(0).getDate().equals(dateNow) && u.get(0).getFailure() == 3) {
              System.out.print("LOCK ACOOUNT");
-             sql = "Update users set lock=?,lastfailure=?,failures=? Where username = ?";
+             sql = "Update users set locked=?,lastfailure=?,failures=? Where username = ?";
              temp.update(sql,1,dateNow.plusYears(100),0,name);
          }
 else {
