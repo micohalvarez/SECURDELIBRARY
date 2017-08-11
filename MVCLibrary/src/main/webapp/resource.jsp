@@ -96,11 +96,28 @@
                                 <td width="80%">${book.tags}</td>
                             </tr>
                         </table>
+
+                        <div class="row">
+                            <div class="col-2">
+                                <form>
+                                    <button type="submit" class="btn btn-outline-success full-width mt-3">Add</button>
+                                </form>
+                            </div>
+                            <div class="col-2">
+                                <form>
+                                    <button type="submit" class="btn btn-outline-success full-width mt-3">Edit</button>
+                                </form>
+                            </div>
+                            <div class="col-2">
+                                <form>
+                                    <button type="submit" class="btn btn-outline-success full-width mt-3">Delete</button>
+                                </form>
+                            </div>
+                        </div>
+
                         <div class="row">
                             <div class="col mt-5">
                                 <p class="lead text-header">Borrow Resource</p>
-
-                                
 
                                 <div class="row mb-3">
                                     <div class="col-2">
@@ -147,6 +164,56 @@
                                 <%--</div>--%>
                             </div>
                         </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <p class="lead text-header mt-5">Reviews</p>
+
+                                <div class="row">
+                                    <div class="col-9">
+                                        <form>
+                                            <div class="form-group row">
+                                                <div class="col">
+                                                    <textarea class="form-control" rows="5" placeholder="Write a review"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <div class="col-2">
+                                                    <button type="submit" class="btn btn-success full-width">Submit</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <p class="mt-3 lead">All reviews</p>
+                                    <hr>
+                                    <div class="row ml-3">
+                                        <div class="col-11">
+                                            <p>Great read!</p>
+                                            <p class="small">Kim Martinez - 2017/02/13</p>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                    <div class="row ml-3">
+                                        <div class="col-11">
+                                            <p>This book was very helpful for my INTRNLP class. It explains the fundamentals well</p>
+                                            <p class="small">Micoh Alvarez - 2017/02/13</p>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                    <div class="row ml-3">
+                                        <div class="col-11">
+                                            <p>Had to wait long to borrow</p>
+                                            <p class="small">Micoh Alvarez - 2017/02/13</p>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
