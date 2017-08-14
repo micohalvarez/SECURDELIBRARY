@@ -39,15 +39,24 @@ public class HomeController {
     public ModelAndView gotoRes(ModelAndView model, @ModelAttribute User user, HttpServletRequest request){
         String keyword = request.getParameter("resourceID");
         int userid = Integer.parseInt(request.getParameter("userid"));
+        int usertype = Integer.parseInt(request.getParameter("usertype"));
+
         keyword = keyword.trim();
 
         Resource book = resourceDAO.getBookByTitle(keyword).get(0);
-        List<Comment> comments;
+        int isReview = resourceDAO.isReviewable(book.getResourceID(),userid);
+
+        List<User> userlist = userDAO.getUsers();
 
         List<Status> status = resourceDAO.getBookStatus(book.getResourceID(),userid);
+        List<Comment> comments = resourceDAO.getComments(book.getResourceID());
         model.addObject("userid",userid);
+        model.addObject("review",isReview);
         model.addObject("book",book);
         model.addObject("status",status);
+        model.addObject("userlist",userlist);
+        model.addObject("usertype",usertype);
+        model.addObject("comments",comments);
         model.setViewName("resource");
         return model;
 
@@ -95,8 +104,7 @@ public class HomeController {
     public ModelAndView search(ModelAndView model, HttpSession session, HttpServletRequest request){
         String keyword = request.getParameter("keyword");
         String userID = request.getParameter("id");
-        User user = (User) session.getAttribute("user");
-        System.out.print(user.getFirstname());
+        int userType = Integer.parseInt(request.getParameter("usertype"));
         String rb = request.getParameter("inlineRadioOptions");
         List<Resource> bookList = null;
 
@@ -117,6 +125,7 @@ public class HomeController {
         model.addObject("bookList",bookList);
         model.addObject("userID",userID);
         model.addObject("keyword",keyword);
+        model.addObject("usertype",userType);
         model.setViewName("search");
         return model;
 

@@ -101,10 +101,12 @@
                 <div class="row">
                     <div class="col-sm-6 m-3">
                         <!--                        <p class="lead pl-4">Results for %search/category%</p>-->
-                        <form>
+                        <form action="/search" method="post">
+                        <input type="hidden" value = "${user.userID}" name= "id">
+                        <input type="hidden" name="usertype" value = "${user.userType}" />
                             <div class="form-group row no-gutters ml-4">
                                 <div class="col-10">
-                                    <input type="text" class="form-control" placeholder="Search for books, articles, magazines, and more">
+                                    <input name="keyword" type="text" class="form-control" placeholder="Search for books, articles, magazines, and more">
                                 </div>
                                 <div class="col-2">
                                     <button type="submit" class="btn btn-success full-width">Search</button>
@@ -146,6 +148,7 @@
                              <form:form id="borrowform" action="/gotoRes" method="post">
                                  <input type="hidden" name="resourceID" id="rname" />
                                  <input type="hidden" name="userid" value = "${userID}" />
+                                 <input type="hidden" name="usertype" value = "${usertype}" />
                              </form:form>
 
                         </ul>

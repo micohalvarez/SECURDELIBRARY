@@ -1,5 +1,6 @@
 package app.com.controller;
 
+import app.com.model.Comment;
 import app.com.model.Resource;
 import app.com.model.Status;
 import app.com.model.User;
@@ -30,18 +31,65 @@ public class ResourceController {
 
     @RequestMapping(value={"/borrowBook"}, method = RequestMethod.POST)
     public ModelAndView borrowbook(ModelAndView model, @ModelAttribute User user, HttpServletRequest request){
-        String keyword = request.getParameter("resourceID");
+
         int bookid = Integer.parseInt(request.getParameter("bookid"));
-        int userid = Integer.parseInt(request.getParameter("userID"));
 
-        Resource book = resourceDAO.getBooks(Integer.parseInt(keyword)).get(0);
+        int userid = Integer.parseInt(request.getParameter("userid"));
+
+
+
+        resourceDAO.borrowBook(bookid,userid);
+
+        int usertype = Integer.parseInt(request.getParameter("usertype"));
+        Resource book = resourceDAO.getBooks(bookid).get(0);
+        int isReview = resourceDAO.isReviewable(book.getResourceID(),userid);
+
+
+
+        List<User> userlist = userDAO.getUsers();
+
         List<Status> status = resourceDAO.getBookStatus(book.getResourceID(),userid);
-
+        List<Comment> comments = resourceDAO.getComments(book.getResourceID());
         model.addObject("userid",userid);
+        model.addObject("review",isReview);
         model.addObject("book",book);
         model.addObject("status",status);
-        resourceDAO.borrowBook(bookid,userid);
-        return new ModelAndView("redirect:/resource.jsp");
+        model.addObject("userlist",userlist);
+        model.addObject("usertype",usertype);
+        model.addObject("comments",comments);
+        model.setViewName("resource");
+        return model;
+
+    }
+
+    @RequestMapping(value={"/addcomment"}, method = RequestMethod.POST)
+    public ModelAndView addcomment(ModelAndView model, @ModelAttribute User user, HttpServletRequest request){
+
+        int bookid = Integer.parseInt(request.getParameter("bookid"));
+        int userid = Integer.parseInt(request.getParameter("userid"));
+        String review = request.getParameter("review");
+        resourceDAO.addComment(review,userid,bookid);
+
+
+        int usertype = Integer.parseInt(request.getParameter("usertype"));
+        Resource book = resourceDAO.getBooks(bookid).get(0);
+        int isReview = resourceDAO.isReviewable(book.getResourceID(),userid);
+
+
+
+        List<User> userlist = userDAO.getUsers();
+
+        List<Status> status = resourceDAO.getBookStatus(book.getResourceID(),userid);
+        List<Comment> comments = resourceDAO.getComments(book.getResourceID());
+        model.addObject("userid",userid);
+        model.addObject("review",isReview);
+        model.addObject("book",book);
+        model.addObject("status",status);
+        model.addObject("userlist",userlist);
+        model.addObject("usertype",usertype);
+        model.addObject("comments",comments);
+        model.setViewName("resource");
+        return model;
 
     }
 
@@ -98,10 +146,9 @@ public class ResourceController {
         resourceDAO.editBook(r);
         List<Resource> resources = resourceDAO.getAllBooks();
 
-        model.addObject("userid",userid);
-        model.addObject("resources",resources);
-        model.setViewName("bookdetails");
-        System.out.print(userid+ " YESS");
+        model.addObject("user",userDAO.getUserbyID(userid).get(0));
+
+        model.setViewName("home");
         return model;
 
     }

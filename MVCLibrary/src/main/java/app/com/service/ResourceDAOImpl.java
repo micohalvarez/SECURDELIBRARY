@@ -1,5 +1,6 @@
 package app.com.service;
 
+import app.com.model.Comment;
 import app.com.model.Resource;
 import app.com.model.Status;
 import app.com.model.User;
@@ -210,6 +211,14 @@ public class ResourceDAOImpl implements ResourceDAO {
         return s;
 
     }
+    public int isReviewable(int bookid,int userid){
+        List<Status> status = getBookStatus(bookid,userid);
+        System.out.print(status.size() + " STATUS SIZE");
+            if(status.size() > 0)
+                    return 1;
+
+        return 0;
+    }
     public void reserveBook(int bookId, int userID){
         LocalDate deadlineDate;
 
@@ -234,8 +243,8 @@ public class ResourceDAOImpl implements ResourceDAO {
                 + " statustype=?";
         temp.update(sql, bookid, userID , deadlineDate, 1); // 1 = available, 2 = reserved, 3 = taken
 
-        String sql2 = "UPDATE resources SET status = 1 WHERE resourceID = ?";
-        temp.update(sql2, bookid);
+        String sql2 = "UPDATE resources SET status = ? WHERE resourceID = ?";
+        temp.update(sql2,1,bookid);
 
 
     }
@@ -265,8 +274,8 @@ public class ResourceDAOImpl implements ResourceDAO {
     public void addBook(Resource book) {
         String sql = "INSERT INTO resources SET title=?, location=?, tags=?, author=?, publisher=?, type=?,"
                 + " status=?";
-        temp.update(sql, book.getTitle(), book.getLocation(), book.getAuthor(),
-                book.getPublisher(), book.getType(), book.getTags(), 0);
+        temp.update(sql, book.getTitle(), book.getLocation(), book.getTags(),
+                book.getAuthor(), book.getPublisher(), book.getType(), 0);
 
 
     }
@@ -278,4 +287,38 @@ public class ResourceDAOImpl implements ResourceDAO {
         temp.update(sql, book.getTitle(), book.getLocation(),book.getTags(), book.getAuthor(), book.getPublisher(), book.getType()
                 , book.getResourceID());
     }
+
+    public void addComment(String comment, int userID,int resourceid){
+            String sql = "INSERT into " + Comment.TABLE_NAME + " Set comment = ? , userid = ? , resourceid = ?";
+
+            temp.update(sql,comment,userID,resourceid);
+
+
+    }
+
+    public List<Comment> getComments(int resourceid){
+
+        String sql = "SELECT * FROM " + Comment.TABLE_NAME +" WHERE " + Comment.COLUMN_RESOURCEID + " = ?";
+        List<Comment> s = temp.query(sql,new Object[]{resourceid}, new RowMapper<Comment>() {
+
+            @Override
+            public Comment mapRow(ResultSet rs, int rowNumber) throws SQLException {
+                // TODO Auto-generated method stub
+                Comment c = new Comment();
+                c.setComment(rs.getString(Comment.COLUMN_COMMENT));
+                c.setCommentID(rs.getInt(Comment.COLUMN_COMMENTID));
+                c.setUserID(rs.getInt("userid"));
+                c.setResourceID(rs.getInt(Comment.COLUMN_RESOURCEID));
+
+                return c;
+            }
+
+        });
+
+
+        return s;
+
+    }
+
+
 }

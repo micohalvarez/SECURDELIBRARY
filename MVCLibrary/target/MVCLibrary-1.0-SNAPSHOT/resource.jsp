@@ -115,7 +115,7 @@
                                 <td width="80%">${book.tags}</td>
                             </tr>
                         </table>
-                        <c:if test="${user.userType > 2}">
+                        <c:if test="${usertype > 2}">
                         <div class="row">
                             <div class="col-2">
                                 <form action="/addbook" method = "post" id="addform">
@@ -126,7 +126,7 @@
                             <div class="col-2">
                                 <form id="editform" action="/editbook" method="post">
                                     <button type="submit" class="btn btn-outline-success full-width mt-3 edit-resource" id="edit_resource">Edit</button>
-                                <input type="hidden" name="title" id="${book.title}" />
+                                <input type="hidden" name="title" value="${book.title}" />
                                 <input type="hidden" name="userid" value = "${userid}" />
                                 </form>
                             </div>
@@ -149,8 +149,8 @@
                                     </div>
                                     <form action="/borrowBook" id="borrowForm" method = "post">
                                         <input type="hidden" value="${book.resourceID}" name="bookid">
-                                        <input type="hidden" value="${userid}" name="userID">
-
+                                        <input type="hidden" value="${userid}" name="userid">
+                                        <input type="hidden" value="${usertype}" name ="usertype">
                                        <c:if test="${book.status == 0}">
                                         <div class="col text-success">
                                         <button type="submit" class="btn btn-success full-width mt-3 borrow_resource">Borrow</button>
@@ -195,15 +195,28 @@
 
                                 <div class="row">
                                     <div class="col-9">
-                                        <form>
+                                        <form action="/addcomment" method = "post">
+                                            <input type="hidden" value="${book.resourceID}" name="bookid">
+                                            <input type="hidden" value="${userid}" name="userid">
+                                            <input type="hidden" value="${usertype}" name ="usertype">
                                             <div class="form-group row">
                                                 <div class="col">
-                                                    <textarea class="form-control" rows="5" placeholder="Write a review"></textarea>
+                                                    <c:if test="${review == 1}">
+                                                    <textarea class="form-control" rows="5" placeholder="Write a review" name="review"></textarea>
+                                                    </c:if>
+                                                    <c:if test="${review == 0}">
+                                                        <textarea class="form-control" rows="5" placeholder="Write a review" disabled></textarea>
+                                                    </c:if>
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <div class="col-2">
-                                                    <button type="submit" class="btn btn-success full-width">Submit</button>
+                                                    <c:if test="${review == 1}">
+                                                    <button type="submit" class="btn btn-success full-width" >Submit</button>
+                                                    </c:if>
+                                                    <c:if test="${review == 0}">
+                                                        <button type="submit" class="btn btn-success full-width" disabled>Submit</button>
+                                                    </c:if>
                                                 </div>
                                             </div>
                                         </form>
@@ -213,27 +226,20 @@
                                 <div>
                                     <p class="mt-3 lead">All reviews</p>
                                     <hr>
+                                    <c:forEach var="comment" items="${comments}" varStatus="status">
                                     <div class="row ml-3">
                                         <div class="col-11">
-                                            <p>Great read!</p>
-                                            <p class="small">Kim Martinez - 2017/02/13</p>
+                                            <p>${comment.comment}</p>
+                                            <c:forEach var="users" items="${userlist}" varStatus="status">
+                                            <c:if test="${comment.userID == users.userID}">
+                                            <p class="small">${users.username}</p>
+                                            </c:if>
+                                            </c:forEach>
+
                                             <hr>
                                         </div>
                                     </div>
-                                    <div class="row ml-3">
-                                        <div class="col-11">
-                                            <p>This book was very helpful for my INTRNLP class. It explains the fundamentals well</p>
-                                            <p class="small">Micoh Alvarez - 2017/02/13</p>
-                                            <hr>
-                                        </div>
-                                    </div>
-                                    <div class="row ml-3">
-                                        <div class="col-11">
-                                            <p>Had to wait long to borrow</p>
-                                            <p class="small">Micoh Alvarez - 2017/02/13</p>
-                                            <hr>
-                                        </div>
-                                    </div>
+                                    </c:forEach>
                                 </div>
                             </div>
                         </div>

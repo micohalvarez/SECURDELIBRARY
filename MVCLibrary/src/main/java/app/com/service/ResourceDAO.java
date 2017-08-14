@@ -1,5 +1,6 @@
 package app.com.service;
 
+import app.com.model.Comment;
 import app.com.model.Resource;
 import app.com.model.Status;
 
@@ -23,6 +24,9 @@ public interface ResourceDAO {
     public void addBook(Resource book);
     public void editBook(Resource book);
     public List<Resource> getBookByTitle(String keyword);
+    public int isReviewable(int bookID,int userID);
+    public List<Comment> getComments(int resourceid);
+    public void addComment(String comment, int userid, int resourceid);
 }
 
 

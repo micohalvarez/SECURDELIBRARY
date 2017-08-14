@@ -123,6 +123,7 @@
 
                         <form:form action="/search" method="post" modelAttribute="user">
                             <input type="hidden" value = "${user.userID}" name= "id">
+                            <input type="hidden" name="usertype" value = "${user.userType}" />
                             <div class="form-group row no-gutters ml-4">
                                 <div class="col-9">
                                     <input type="text" class="form-control" name="keyword"/>
@@ -157,7 +158,9 @@
 
                 <div class="row">
                     <div class="col m-3">
+                        <c:if test="${user.userType > 2}">
                         <p class="lead pl-4 mb-0">Controls</p>
+                        </c:if>
                         <div class="row pl-4 mt-0">
                             <div class="col-3">
                              <c:if test="${user.userType == 5}">

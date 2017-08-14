@@ -16,6 +16,7 @@ public interface UserDAO {
     public void updatelog(String name);
     public List<User> getUsers();
     public void unlock(int userid);
+    public List<User> getUserbyID(int userid);
 
 
 }

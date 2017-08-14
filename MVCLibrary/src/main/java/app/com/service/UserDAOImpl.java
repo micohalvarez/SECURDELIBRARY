@@ -169,6 +169,36 @@ public class UserDAOImpl implements UserDAO {
         return u;
     }
 
+    public List<User> getUserbyID(int id){
+
+
+        String sql = "SELECT * FROM " + User.TABLE_NAME + " Where " + User.COLUMN_UID+ " = ?";
+
+        List<User> u = temp.query(sql,  new Object[] {id}, new RowMapper<User>() {
+
+            @Override
+            public User mapRow(ResultSet rs, int rowNumber) throws SQLException {
+                // TODO Auto-generated method stub
+                User u = new User();
+
+                u.setUserID(rs.getInt(User.COLUMN_UID));
+                u.setUsername(rs.getString(User.COLUMN_UN));
+                u.setUserType(rs.getInt(User.COLUMN_USERTYPE));
+                u.setEmail(rs.getString(User.COLUMN_EMAIL));
+                u.setIdNumber(rs.getString(User.COLUMN_IDNUM));
+                u.setPassword(rs.getString(User.COLUMN_PW));
+                u.setLocked(rs.getInt("locked"));
+                u.setPassword(rs.getString(User.COLUMN_PW));
+                u.setFailure(rs.getInt("failures"));
+                u.setDate(rs.getDate("lastfailure").toLocalDate());
+
+                return u;
+            }
+
+        });
+        return u;
+    }
+
     public List<User> getAllUsers(){
         ArrayList<User> users = new ArrayList<User>();
 
