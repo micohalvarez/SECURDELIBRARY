@@ -62,7 +62,7 @@ public class UserController {
         }
 
         userdao.updatelog(us.getUsername());
-        session.setAttribute("user", users.get(0));
+
         model.setViewName("index");
 
         return model;

@@ -1,5 +1,6 @@
 package app.com.service;
 
+import app.com.model.Resource;
 import app.com.model.Room;
 import app.com.model.User;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -66,6 +67,30 @@ public class UserDAOImpl implements UserDAO {
         else return 0;
     }
 
+    public List<User> getUsers(){
+
+        String sql = "SELECT * FROM " + User.TABLE_NAME;
+        List<User> u = temp.query(sql, new RowMapper<User>() {
+
+            @Override
+            public User mapRow(ResultSet rs, int rowNumber) throws SQLException {
+                // TODO Auto-generated method stub
+                User u = new User();
+
+                u.setUserID(rs.getInt(User.COLUMN_UID));
+                u.setUsername(rs.getString(User.COLUMN_UN));
+                u.setEmail(rs.getString(User.COLUMN_EMAIL));
+                u.setIdNumber(rs.getString(User.COLUMN_IDNUM));
+                u.setPassword(rs.getString(User.COLUMN_PW));
+                u.setLocked(rs.getInt("locked"));
+                u.setUserType(rs.getInt(User.COLUMN_USERTYPE));
+
+                return u;
+            }
+
+        });
+        return u;
+    }
     public boolean passwordvalidation(String password) {
 
         String pattern = "(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}";
@@ -103,7 +128,10 @@ public class UserDAOImpl implements UserDAO {
                 u.setIdNumber(rs.getString(User.COLUMN_IDNUM));
                 u.setPassword(rs.getString(User.COLUMN_PW));
                 u.setUserType(rs.getInt(User.COLUMN_USERTYPE));
-
+                u.setLocked(rs.getInt("locked"));
+                u.setPassword(rs.getString(User.COLUMN_PW));
+                u.setFailure(rs.getInt("failures"));
+                u.setDate(rs.getDate("lastfailure").toLocalDate());
                 return u;
             }
 
@@ -129,6 +157,10 @@ public class UserDAOImpl implements UserDAO {
                 u.setEmail(rs.getString(User.COLUMN_EMAIL));
                 u.setIdNumber(rs.getString(User.COLUMN_IDNUM));
                 u.setPassword(rs.getString(User.COLUMN_PW));
+                u.setLocked(rs.getInt("locked"));
+                u.setPassword(rs.getString(User.COLUMN_PW));
+                u.setFailure(rs.getInt("failures"));
+                u.setDate(rs.getDate("lastfailure").toLocalDate());
 
                 return u;
             }
@@ -196,6 +228,7 @@ public class UserDAOImpl implements UserDAO {
                 u.setPassword(rs.getString(User.COLUMN_PW));
                 u.setFailure(rs.getInt("failures"));
                 u.setDate(rs.getDate("lastfailure").toLocalDate());
+                u.setLocked(rs.getInt("locked"));
                 return u;
             }
 
@@ -214,6 +247,13 @@ else {
 
              temp.update(sql, dateNow, name);
          }
+    }
+    public void unlock(int userid){
+
+        String sql = "Update users set locked = 0 where "+ User.COLUMN_UID+ " = ?";
+
+        temp.update(sql,userid);
+
     }
 
 

@@ -160,21 +160,35 @@
                         <p class="lead pl-4 mb-0">Controls</p>
                         <div class="row pl-4 mt-0">
                             <div class="col-3">
+                             <c:if test="${user.userType == 5}">
                                 <form:form action="/addbook" method = "post" id="addform">
                                     <button type="submit" class="btn btn-outline-success full-width mt-3">Add Resource</button>
                                     <input type="hidden" name="userid" value = "${user.userID}" />
+                                    <input type="hidden" name="usertype" value = "${user.userType}" />
                                 </form:form>
                             </div>
                             <div class="col-3">
                             <form:form action="/creuser" method = "post" id="addform">
                                     <button type="submit" class="btn btn-outline-success full-width mt-3">Create Account</button>
                                 <input type="hidden" name="admin" value="${user.userType}">
+                                <input type="hidden" name="usertype" value = "${user.userType}" />
                                 </form:form>
                             </div>
                             <div class="col-3">
-                                <form>
+                                <form:form action="/unlock" method = "post" id="addform">
                                     <button type="submit" class="btn btn-outline-success full-width mt-3">Unlock Account</button>
-                                </form>
+                                    <input type="hidden" name="usertype" value = "${user.userType}" />
+                                    <input type="hidden" name="userid" value = "${user.userID}" />
+
+                                </form:form>
+                                </c:if>
+                                <c:if test="${user.userType == 4 || user.userType == 3}">
+                                    <form:form action="/addbook" method = "post" id="addform">
+                                        <button type="submit" class="btn btn-outline-success full-width mt-3">Add Resource</button>
+                                        <input type="hidden" name="usertype" value = "${user.userType}" />
+                                        <input type="hidden" name="userid" value = "${user.userID}" />
+                                    </form:form>
+                                </c:if>
                             </div>
                         </div>
                     </div>

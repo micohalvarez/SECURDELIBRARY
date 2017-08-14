@@ -132,7 +132,7 @@
                 <div class="row">
                     <div class="col-sm-11 m-3">
                         <ul class="list-group">
-                            <p class="lead pl-4">Results for ${keyword}</p>
+                            <p class="lead pl-4">Results for "${keyword}"</p>
 
                         <c:forEach var="resource" items="${bookList}" varStatus="status">
                             <li class="list-group-item pl-3 ">

@@ -14,6 +14,8 @@ public interface UserDAO {
     public void deleteUser(int userID);
     public List<User> getUserbyUN(String username);
     public void updatelog(String name);
+    public List<User> getUsers();
+    public void unlock(int userid);
 
 
 }

@@ -95,8 +95,6 @@ public class ResourceController {
     @RequestMapping(value={"/updatebook"}, method = RequestMethod.POST)
     public ModelAndView updatebook(@ModelAttribute("resource") Resource r,ModelAndView model, HttpServletRequest request){
         int userid = Integer.parseInt(request.getParameter("userid"));
-
-
         resourceDAO.editBook(r);
         List<Resource> resources = resourceDAO.getAllBooks();
 
@@ -117,7 +115,25 @@ public class ResourceController {
 
         model.addObject("userid",userid);
         model.addObject("resources",resources);
-        model.setViewName("bookdetails");
+        model.setViewName("home");
+        System.out.print(userid+ " YESS");
+        return model;
+
+    }
+
+    @RequestMapping(value={"/deletebook"}, method = RequestMethod.POST)
+    public ModelAndView deletebook(@ModelAttribute("resource") Resource r,ModelAndView model, HttpServletRequest request){
+        System.out.print("DELETE METHOD");
+
+        int userid = Integer.parseInt(request.getParameter("userid"));
+        int bookid = Integer.parseInt(request.getParameter("bookid"));
+
+        resourceDAO.deleteBook(bookid);
+        List<Resource> resources = resourceDAO.getAllBooks();
+
+        model.addObject("userid",userid);
+        model.addObject("resources",resources);
+        model.setViewName("home");
         System.out.print(userid+ " YESS");
         return model;
 

@@ -51,7 +51,15 @@
 			$("#borrowform").submit();
 		});
 
-	
+        $("#add_resource").click(function () {
+            $("addform").submit();
+        });
+        $("#edit_resource").click(function () {
+            $("editform").submit();
+        });
+        $("#delete_resource").click(function () {
+            $("deleteform").submit();
+        });
 	});
 	</script>
 </head>
@@ -107,28 +115,30 @@
                                 <td width="80%">${book.tags}</td>
                             </tr>
                         </table>
-
+                        <c:if test="${user.userType > 2}">
                         <div class="row">
                             <div class="col-2">
-                                <form:form action="/addbook" method = "post" id="addform">
-                                    <button type="submit" class="btn btn-outline-success full-width mt-3">Add</button>
+                                <form action="/addbook" method = "post" id="addform">
+                                    <button type="submit" class="btn btn-outline-success full-width mt-3 add-resource" id="add_resource">Add</button>
                                     <input type="hidden" name="userid" value = "${userid}" />
                                 </form>
                             </div>
                             <div class="col-2">
-                                <form:form id="editform" action="/editbook" method="post">
-                                    <button type="submit" class="btn btn-outline-success full-width mt-3">Edit</button>
+                                <form id="editform" action="/editbook" method="post">
+                                    <button type="submit" class="btn btn-outline-success full-width mt-3 edit-resource" id="edit_resource">Edit</button>
                                 <input type="hidden" name="title" id="${book.title}" />
                                 <input type="hidden" name="userid" value = "${userid}" />
-                                </form:form>
+                                </form>
                             </div>
                             <div class="col-2">
-                                <form>
-                                    <button type="submit" class="btn btn-outline-success full-width mt-3">Delete</button>
+                                <form action="/deletebook" method="post" id="deleteform">
+                                    <button type="submit" class="btn btn-outline-success full-width mt-3 delete-resource" id="delete_resource">Delete</button>
+                                    <input type="hidden" name="bookid" value = "${book.resourceID}" />
+                                    <input type="hidden" name="userid" value = "${userid}" />
                                 </form>
                             </div>
                         </div>
-
+                        </c:if>
                         <div class="row">
                             <div class="col mt-5">
                                 <p class="lead text-header">Borrow Resource</p>

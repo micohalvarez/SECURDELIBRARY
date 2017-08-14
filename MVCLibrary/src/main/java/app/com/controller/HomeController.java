@@ -53,6 +53,44 @@ public class HomeController {
 
     }
 
+    @RequestMapping(value={"/unlock"}, method = RequestMethod.POST)
+    public ModelAndView unlock(ModelAndView model, @ModelAttribute User user, HttpServletRequest request){
+
+        int userid = Integer.parseInt(request.getParameter("userid"));
+        int usertype = Integer.parseInt(request.getParameter("usertype"));
+
+        List<User> us = userDAO.getUsers();
+        for(int i = 0; i < us.size(); i ++){
+            System.out.print(us.get(i).getLocked());
+        }
+        System.out.print((userid));
+        model.addObject("userid",userid);
+        model.addObject("userlist",us);
+        model.addObject("usertype",usertype);
+        model.setViewName("lockedaccounts");
+        return model;
+
+    }
+    @RequestMapping(value={"/freeaccount"}, method = RequestMethod.POST)
+    public ModelAndView freeaccount(ModelAndView model, @ModelAttribute User user, HttpServletRequest request){
+
+        String username = request.getParameter("username");
+        int curUser = Integer.parseInt(request.getParameter("userid"));
+        int usertype = Integer.parseInt(request.getParameter("usertype"));
+        User u = userDAO.getUserbyUN(username).get(0);
+
+        List<User> us = userDAO.getUsers();
+
+        userDAO.unlock(u.getUserID());
+        model.addObject("userid",curUser);
+        model.addObject("userlist",us);
+        model.addObject("usertype",usertype);
+
+        model.setViewName("lockedaccounts");
+        return model;
+
+    }
+
     @RequestMapping(value={"/search"}, method = RequestMethod.POST)
     public ModelAndView search(ModelAndView model, HttpSession session, HttpServletRequest request){
         String keyword = request.getParameter("keyword");

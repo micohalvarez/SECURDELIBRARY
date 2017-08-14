@@ -257,7 +257,8 @@ public class ResourceDAOImpl implements ResourceDAO {
 
     @Override
     public void deleteBook(int bookID) {
-
+        String sql = "DELETE FROM resources WHERE" + " resourceID=?";
+        temp.update(sql, bookID);
     }
 
     @Override
