@@ -8,13 +8,11 @@
     <script type="text/javascript"
             src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
     <script type="text/javascript"></script>
-    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Register</title>
+    <title>Browse Resources</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
@@ -49,57 +47,90 @@
         .nav-border {
             box-shadow: 5px 5px 5px #EEEEEE;
         }
+
+        .scrollmenu {
+            overflow: auto;
+            white-space: nowrap;
+        }
+
+        .scrollitem {
+            display: inline-block;
+            text-align: center;
+            padding: 14px;
+        }
     </style>
+    <script>
+        $(document).ready(function() {
+
+            $(".add_book").click(function() {
+                $("#addform").submit();
+            });
+            $(".book_title").click(function() {
+                var name = $(this).text();
+                $("#rname").val(name);
+                $("#editform").submit();
+            });
+        });
+    </script>
 </head>
+
 <body class="bg-faded">
 <div class="container-fluid">
     <nav class="navbar fixed-top navbar-light nav-border bg-white">
         <a class="navbar-brand">
-            <img src="img/dlsu_signature.png" height="40" alt="">
+            <img src="../img/dlsu_signature.png" height="40" alt="">
         </a>
     </nav>
 </div>
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-4 offset-4 bg-white align-self-center bordered mt-5 p-4">
-            <p class="lead text-header text-center">Add a Book</p>
-            <form:form action="/updatebook"  method = "post" modelAttribute="resource" >
-            <input type="hidden" name="userid" value = "${userid}" />
-            <form:input type="hidden" path="resourceID" value = "${book.resourceID}" />
-            <div class="form-group">
-                <form:input type="text" cssClass="form-control" placeholder="${book.title}" value="${book.title}" path ="title"/>
-            </div>
-            <div class="form-group">
-                <form:input type="text" cssClass="form-control" placeholder="${book.tags}" value="${book.tags}" path ="tags"/>
-            </div>
+        k<div class="col-sm-10 offset-sm-1 bg-white align-self-center bordered p-4">
+        <!--
+<p class="lead text-header pt-3 pl-3">Senior High School Library System</p>
+<hr>-->
 
-            <div class="form-group">
-                <form:input type="text" cssClass="form-control" placeholder="${book.type}" value="${book.type}" path ="type"/>
-                <small class="form-text text-muted">(e.g. 1 = book or 2 = magazine)</small>
-            </div>
-            <div class="form-group">
-                <form:input type="text" cssClass="form-control" placeholder="${book.location}" value="${book.location}" path ="location"/>
-                <small class="form-text text-muted">(e.g. 100,200)</small>
-            </div>
-            <div class="form-group">
-                <form:input type="text" cssClass="form-control" placeholder="${book.author}" value="${book.author}" path ="author"/>
-            </div>
-            <div class="form-group">
-                <div class="col-7">
-                    <form:input type="text" cssClass="form-control" placeholder="${book.publisher}" value="${book.publisher}" path ="publisher"/>
-                </div>
-                <div>
-                    <button type="submit" class="btn btn-success full-width mt-3">Submit</button>
-                </div>
-                </form:form>
+        <div class="row">
+            <div class="col-sm-6 m-3">
+                <!--                        <p class="lead pl-4">Results for %search/category%</p>-->
+
+                    <div class="form-group row no-gutters ml-4">
+                        <form:form action="/addbook" method = "post" id="addform">
+                        <div class="col">
+                            <button type="submit" class="btn btn-success full-width add_book">Add Book</button>
+                        </div>
+                            <input type="hidden" name="userid" value = "${userid}" />
+                        </form:form>
+                    </div>
 
             </div>
         </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm-11 m-3">
+                <ul class="list-group">
+                    <p class="lead pl-4">All <Resources></Resources></p>
 
+                    <c:forEach var="resource" items="${resources}" varStatus="status">
+                        <li class="list-group-item pl-3 ">
+                            <img src="../img/book.png">
+                            <a href="#" class="book_title">
+                                    ${resource.title}
+                            </a>
+                        </li>
+                    </c:forEach>
+
+                    <form:form id="editform" action="/editbook" method="post">
+                        <input type="hidden" name="title" id="rname" />
+                        <input type="hidden" name="userid" value = "${userid}" />
+                    </form:form>
+
+                </ul>
+            </div>
+        </div>
+    </div>
     </div>
 </div>
-
 
 
 <!-- jQuery first, then Tether, then Bootstrap JS. -->
@@ -107,4 +138,5 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 </body>
+
 </html>

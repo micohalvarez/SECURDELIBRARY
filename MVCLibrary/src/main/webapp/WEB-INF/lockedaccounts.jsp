@@ -68,7 +68,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <a class="navbar-brand">
-                <img src="img/dlsu_signature.png" height="40" alt="">
+                <img src="../img/dlsu_signature.png" height="40" alt="">
             </a>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">

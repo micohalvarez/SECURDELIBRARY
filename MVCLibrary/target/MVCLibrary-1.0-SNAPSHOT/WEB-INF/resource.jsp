@@ -70,7 +70,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <a class="navbar-brand">
-                <img src="img/dlsu_signature.png" height="40" alt="">
+                <img src="../img/dlsu_signature.png" height="40" alt="">
             </a>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
@@ -87,7 +87,7 @@
             <div class="col-10 offset-1 bg-white align-self-center bordered mt-4 p-4">
                 <div class="row">
                     <div class="col-2 text-center pt-5">
-                        <img src="img/book.png">
+                        <img src="../img/book.png">
                         <br>
                         <small>
                             [Book]

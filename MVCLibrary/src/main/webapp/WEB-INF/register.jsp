@@ -55,7 +55,7 @@
     <div class="container-fluid">
         <nav class="navbar fixed-top navbar-light nav-border bg-white">
             <a class="navbar-brand">
-                <img src="img/dlsu_signature.png" height="40" alt="">
+                <img src="../img/dlsu_signature.png" height="40" alt="">
             </a>
         </nav>
     </div>
