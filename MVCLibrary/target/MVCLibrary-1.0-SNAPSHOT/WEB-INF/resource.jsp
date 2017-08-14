@@ -158,7 +158,7 @@
                                        </c:if>
                                            <c:if test="${book.status == 1}">
                                             <div class="col text-success">
-                                           <button type="button" class="btn btn-success disabled full-width mt-3" disabled>Borrow</button>
+                                           <button type="button" class="btn btn-success disabled full-width mt-3" disabled>Borrow</button> ${status.get(0).endDate}
                                             </div>
                                            </c:if>
                                     </div>

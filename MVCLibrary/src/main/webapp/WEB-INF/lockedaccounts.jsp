@@ -93,11 +93,22 @@
                                 <div class="row ml-3">
                                 <div class="col-11">
                                     <a href="#" class="user_title">${user.username}</a>
+                                    <a hidden>${isLocked = 1}</a>
                                     <hr>
                                 </div>
-                            </div>
-                            </c:if>
-                            </c:forEach>
+                                </div>
+                                    </c:if>
+                                    </c:forEach>
+                                    <c:if test="${isLocked == 0}">
+                                        <div class="row ml-3">
+                                            <div class="col-11">
+                                                <a href="#" class="user_title">Go Back</a>
+                                                <hr>
+                                            </div>
+                                            </c:if>
+
+
+
                             <form id="borrowform" action="/freeaccount" method="post">
                                 <input type="hidden" name="usertype" value="${usertype}"/>
                                 <input type="hidden" name="username" id="rname" />

@@ -37,9 +37,14 @@ public class UserController {
     }
     @RequestMapping(value={"/signIn"}, method = RequestMethod.POST)
     public ModelAndView signIn(ModelAndView model, @ModelAttribute User user, HttpSession session) {
-
-        User us = userdao.getUserbyUN(user.getUsername()).get(0);
-
+        User us = null;
+        try {
+             us = userdao.getUserbyUN(user.getUsername()).get(0);
+        }
+        catch (Exception e){
+            model.setViewName("index");
+            return model;
+        }
         BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
         if(encoder.matches(user.getPassword(), us.getPassword()) && us.getLocked() == 0)
         {
@@ -57,9 +62,8 @@ public class UserController {
             model.setViewName("home");
             return model;
         }
-
+        System.out.println(us.getUsername());
         userdao.updatelog(us.getUsername());
-
         model.setViewName("index");
 
         return model;
@@ -71,8 +75,11 @@ public class UserController {
     if(userType == 1) {
         user.setUserType(1);
     }
-        if(userdao.addUser(user) == 1)
-            return new ModelAndView("redirect:/index.jsp");
+        if(userdao.addUser(user) == 1) {
+            model.addObject("user", new User());
+            model.setViewName("index");
+            return model;
+        }
         else {
 
             model.addObject("usertype", 0);

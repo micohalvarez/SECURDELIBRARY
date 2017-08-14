@@ -69,10 +69,10 @@ public class HomeController {
         int usertype = Integer.parseInt(request.getParameter("usertype"));
 
         List<User> us = userDAO.getUsers();
-        for(int i = 0; i < us.size(); i ++){
-            System.out.print(us.get(i).getLocked());
-        }
+
+
         System.out.print((userid));
+        model.addObject("isLocked", 0);
         model.addObject("userid",userid);
         model.addObject("userlist",us);
         model.addObject("usertype",usertype);
@@ -85,12 +85,22 @@ public class HomeController {
 
         String username = request.getParameter("username");
         int curUser = Integer.parseInt(request.getParameter("userid"));
+        if(username.equalsIgnoreCase("Go Back")){
+
+            User us = userDAO.getUserbyID(curUser).get(0);
+            model.addObject("user",us);
+            model.setViewName("home");
+            return model;
+
+        }
+
         int usertype = Integer.parseInt(request.getParameter("usertype"));
         User u = userDAO.getUserbyUN(username).get(0);
-
+        userDAO.unlock(u.getUserID());
         List<User> us = userDAO.getUsers();
 
-        userDAO.unlock(u.getUserID());
+
+        model.addObject("isLocked", 0);
         model.addObject("userid",curUser);
         model.addObject("userlist",us);
         model.addObject("usertype",usertype);
@@ -121,14 +131,12 @@ public class HomeController {
             bookList = resourceDAO.getBooksByAuthor(keyword);
         }
 
-
         model.addObject("bookList",bookList);
-        model.addObject("userID",userID);
+        model.addObject("userID",userID );
         model.addObject("keyword",keyword);
         model.addObject("usertype",userType);
         model.setViewName("search");
         return model;
-
 
     }
 
